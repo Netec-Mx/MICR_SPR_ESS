@@ -6,6 +6,8 @@ En este laboratorio se implementa una aplicación monolítica de .net core usand
 
 ## Objetivos:
 
+Al finalizar la práctica, serás capaz de:
+
 - Comprender la estructura de un sistema monolítico. <br>
 - Iniciar y probar un sistema monolítico. <br>
 - Analizar los componentes del sistema. <br>
