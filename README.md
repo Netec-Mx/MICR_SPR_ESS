@@ -1,3 +1,5 @@
+### [Sistema Monolítico Net Core 8](./Capitulo1/README.md) 
+
 # Microservicios con Spring Cloud Essentials
 
 **Plataforma de Laboratorios**
@@ -10,7 +12,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
 
 01. ### [Sistema Monolítico Net Core 8](./Capitulo1/README.md) <br>
     - **Descripción**: Despliegue y análisis de una aplicación monolítica en **.net core 8**<br>
-    - ⏱️ **Duración estimada**: 45 min<br>
+    - ⏱️ **Duración estimada**: 45 min <br>
 
 
 02. ### [Servicio de descubrimiento con microservicios](./Capitulo2/README.md)<br>
