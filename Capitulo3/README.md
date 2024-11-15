@@ -1,10 +1,18 @@
-# 3. Diseño de microservicios con Spring Boot 
+# Práctica 3. Diseño de microservicios con Spring Boot 
+
+
+## Descripción:
+
 Crear un microservicio dedicado a la gestión de clientes que permita registrar, actualizar, consultar y eliminar información de clientes de manera segura y eficiente. Este microservicio deberá integrarse en un sistema más amplio en un futuro. 
-## Objetivos
-- Diseñar un microservicio
-- Implementar una fuente de datos externa
-- Utilizar Spring Data JPA para la creación del repositorio de datos
-- Implementar un controlador que expone las operaciones de http fuera del microservicio
+
+## Objetivos:
+
+Al finalizar la práctica, serás capaz de:
+
+- Diseñar un microservicio. <br>
+- Implementar una fuente de datos externa. <br>
+- Utilizar Spring Data JPA para la creación del repositorio de datos.<br>
+- Implementar un controlador que expone las operaciones de http fuera del microservicio.
 
 ---
 
@@ -13,14 +21,14 @@ Crear un microservicio dedicado a la gestión de clientes que permita registrar,
             <tr>
                 <td style="text-align: center;">
                     <a href="../Capitulo2/README.md"><img src="../images/anterior.png" width="40px"></a>
-                    <br>anterior
+                    <br>Anterior
                 </td>
                 <td style="text-align: center;">
-                   <a href="../README.md">Lista Laboratorios</a>
+                   <a href="../README.md">Lista de laboratorios</a>
                 </td>
 <td style="text-align: center;">
                     <a href="../Capitulo4/README.md"><img src="../images/siguiente.png" width="40px"></a>
-                    <br>siguiente
+                    <br>Siguiente
                 </td>
             </tr>
         </table>
@@ -29,12 +37,12 @@ Crear un microservicio dedicado a la gestión de clientes que permita registrar,
 ---
 
 
-## Diagrama
+## Objetivo visual:
 
 ![diagrama](../images/3/diagrama.png)
 
+### Instrucciones:
 
-## Instrucciones
 Esta práctica se separa en las siguientes secciones:
 
 - **[Configuración MySQL](#configuración-mysql-instrucciones)**
@@ -43,6 +51,7 @@ Esta práctica se separa en las siguientes secciones:
 
 
 ## Configuración MySQL [Instrucciones](#instrucciones)
+
 1. Abrir **MySQL 8 Command Line  Client** 
 
 > **NOTA** Es posible que nos pida un password, este password se encuentra en un archivo en el escritorio de la máquina virtual (ó si se esta usando su equipo de cómputo escribir el password configurado)
