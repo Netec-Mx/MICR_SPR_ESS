@@ -1,5 +1,3 @@
-### [Sistema Monolítico Net Core 8](./Capitulo1/README.md) 
-
 # Microservicios con Spring Cloud Essentials
 
 **Plataforma de Laboratorios**
