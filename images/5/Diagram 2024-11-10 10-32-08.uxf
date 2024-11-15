@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>480</x><y>110</y><w>580</w><h>370</h></coordinates><panel_attributes>*MicroserviceConfig*
+--
+bg=white
+lw=3
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>210</y><w>210</w><h>130</h></coordinates><panel_attributes>*application.properties*
+--
+
+*Microservice Name*
+*Git configuration*
+
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>760</x><y>150</y><w>280</w><h>280</h></coordinates><panel_attributes>*main package*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>220</y><w>200</w><h>150</h></coordinates><panel_attributes>@EnableConfigServer
+*Main class*
+--
+
+main(args:String[]):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>150</y><w>320</w><h>230</h></coordinates><panel_attributes>*Git Repository*
+fontsize=26
+fg=#82107c
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>230</y><w>270</w><h>110</h></coordinates><panel_attributes>*microservice-name.properties*
+--
+fontsize=15
+
+/*server port*/
+/*hibernate config*/
+/*datasource config*/
+
+bg=#296ee6</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>230</y><w>190</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+lw=5
+fg=blue
+
+*Request config*
+fontsize=14
+
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>280</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+lw=5
+fg=blue
+
+*Send config*
+fontsize=14</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>660</x><y>550</y><w>310</w><h>280</h></coordinates><panel_attributes>lt=.
+*Microservice Client*
+fontsize=19
+fg=white
+bg=#4c0e75
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>470</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+lw=5
+fg=blue
+
+*Send config*
+fontsize=14</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>

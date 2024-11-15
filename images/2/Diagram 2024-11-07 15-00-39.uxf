@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>80</y><w>470</w><h>190</h></coordinates><panel_attributes>bg=black
+lt=-
+fontsize=25
+fg=white
+**Microservice Eureka**
+
+Discovery Server
+
+micro-articulo: ip:port, ip:port
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>390</y><w>430</w><h>180</h></coordinates><panel_attributes>bg=white
+lt=-
+fontsize=25
+fg=blue
+**Microservice Item**
+
+RESTful
+GET, POST, PUT, DELETE
+
+port: 8081
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>390</y><w>430</w><h>180</h></coordinates><panel_attributes>bg=white
+lt=-
+fontsize=25
+fg=blue
+**Microservice Item**
+
+RESTful
+GET, POST, PUT, DELETE
+
+port: 8082
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>260</y><w>200</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+fg=red
+</panel_attributes><additional_attributes>180;10;180;90;10;90;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>260</y><w>140</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+fg=red
+</panel_attributes><additional_attributes>10;10;10;90;120;90;120;130</additional_attributes></element></diagram>

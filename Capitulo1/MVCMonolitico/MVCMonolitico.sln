@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMonolitico", "MVCMonolitico\MVCMonolitico.csproj", "{F4A6EEF8-C680-439B-8215-0778B9DD4103}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A6EEF8-C680-439B-8215-0778B9DD4103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A6EEF8-C680-439B-8215-0778B9DD4103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A6EEF8-C680-439B-8215-0778B9DD4103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A6EEF8-C680-439B-8215-0778B9DD4103}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D0D86F1-22D3-4EE0-84E5-7170502D20B3}
+	EndGlobalSection
+EndGlobal

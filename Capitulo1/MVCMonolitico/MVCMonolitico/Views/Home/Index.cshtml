@@ -1,0 +1,54 @@
+﻿@using MVCMonolitico.Models.Entities
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid">
+    <h2>Manejo de usuarios</h2>
+    <div class="container-fluid">
+        <form class="form" action="/Home/SaveUser" method="post">
+            <label>Name:</label>
+            <input required=true name="Name" /> <br/>
+            <label>Email: </label>
+            <input type=email  required=true name="Email"/><br />
+            <label>Password: </label>
+            <input type="password" name="Password" /><br />
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <br />
+
+    <div class="container-fluid">
+        <h2>Usuarios</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>Delete</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var user in (List<User>)ViewData["Users"])
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                        <td>
+                            <form action="/Home/DeleteUser" method="get">
+                                <input type="hidden" name="id" value="@user.Id" />
+                                <button type="submit" action="/Home/DeleteUser">eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>

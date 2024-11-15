@@ -1,0 +1,55 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>495</x><y>169</y><w>531</w><h>45</h></coordinates><panel_attributes>*CI/CD pipeline Github Actions*
+fontsize=40
+
+fg=blue
+lt=.
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>18</x><y>358</y><w>180</w><h>72</h></coordinates><panel_attributes>*MicroserviceItem*
+/Code/
+/Dockerfile/
+fontsize=16
+valign=top
+bg=#7134eb
+fg=blue
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>261</x><y>304</y><w>1134</w><h>171</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>270</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 1*
+Copy Code to environment
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>36</x><y>331</y><w>153</w><h>27</h></coordinates><panel_attributes>*Code in Github repository*
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>468</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 2*
+Install JDK 17
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>657</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 3*
+execute Test and build package
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>846</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 4*
+Build docker image
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1035</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 5*
+docker login
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1224</x><y>340</y><w>162</w><h>99</h></coordinates><panel_attributes>lt=.
+*step 6*
+docker push image 
+fg=black
+bg=#1f9de0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>376</y><w>90</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>423</x><y>376</y><w>63</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>376</y><w>63</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>376</y><w>54</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>376</y><w>63</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1179</x><y>376</y><w>63</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=7
+fg=#e0761f</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element></diagram>

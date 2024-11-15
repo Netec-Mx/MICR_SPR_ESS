@@ -1,0 +1,110 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLUseCase</id><coordinates><x>0</x><y>336</y><w>161</w><h>147</h></coordinates><panel_attributes>lt=.
+Microservice Client
+fontsize=20
+fg=blue
+bg=#1271B8
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>21</x><y>511</y><w>119</w><h>28</h></coordinates><panel_attributes>fg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>35</x><y>560</y><w>91</w><h>21</h></coordinates><panel_attributes>MySQL Database
+fontsize=16
+
+fg=blue
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>476</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>14</x><y>518</y><w>140</w><h>105</h></coordinates><panel_attributes>fg=red
+</panel_attributes><additional_attributes>180;10;180;130;10;130;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>182</x><y>133</y><w>1316</w><h>490</h></coordinates><panel_attributes>**MicroserviceOrder project**
+fontsize=25
+--
+bg=white
+lw=2
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>196</x><y>357</y><w>112</w><h>91</h></coordinates><panel_attributes>**application.properties**
+--
+
+*Microservice name*
+*Server port*
+*hibernate config*
+*datasource config*
+bg=#3e9615
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>336</x><y>224</y><w>203</w><h>301</h></coordinates><panel_attributes>**entities**
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>560</x><y>224</y><w>203</w><h>301</h></coordinates><panel_attributes>*feign*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>777</x><y>224</y><w>203</w><h>301</h></coordinates><panel_attributes>*datasource*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1008</x><y>224</y><w>203</w><h>301</h></coordinates><panel_attributes>*service*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>245</y><w>147</w><h>91</h></coordinates><panel_attributes>/&lt;java class&gt;/
+*Client*
+--
+-id:long
+-name:String
+-email:String
+-address:String
+--
+getters and setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>392</y><w>147</w><h>105</h></coordinates><panel_attributes>/&lt;java class&gt;/
+*Order*
+--
+-id:long
+-idClient:long
+-client:Client
+-date:LocalDate
+-amount:double
+--
+getters and setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>413</x><y>329</y><w>21</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>581</x><y>329</y><w>147</w><h>91</h></coordinates><panel_attributes>/&lt;java interface&gt;/
+*IClientFeign*
+--
+
+--
+searchById(id:long):Client
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>287</y><w>105</w><h>98</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;90;10;90;120;130;120</additional_attributes></element><element><id>Relation</id><coordinates><x>154</x><y>406</y><w>476</w><h>182</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;10;50;10;50;240;660;240;660;20</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>413</y><w>497</w><h>182</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;50;80;50;80;240;690;240;690;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>728</y><w>91</w><h>21</h></coordinates><panel_attributes>MySQL Database
+fontsize=16
+
+fg=blue
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>686</y><w>140</w><h>105</h></coordinates><panel_attributes>fg=red
+</panel_attributes><additional_attributes>180;10;180;130;10;130;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>700</x><y>679</y><w>119</w><h>28</h></coordinates><panel_attributes>fg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>749</x><y>616</y><w>21</w><h>84</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>315</y><w>147</w><h>49</h></coordinates><panel_attributes>/&lt;java interface&gt;/
+*IOrderDAO*
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>245</y><w>147</w><h>49</h></coordinates><panel_attributes>/&lt;java interface&gt;/
+*CrudRepository&lt;Order,Long&gt;*
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>861</x><y>287</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1253</x><y>224</y><w>203</w><h>301</h></coordinates><panel_attributes>*controller*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>259</y><w>322</w><h>196</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;260;80;260;80;10;440;10</additional_attributes></element><element><id>Relation</id><coordinates><x>245</x><y>343</y><w>567</w><h>224</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>790;10;750;10;750;300;10;300;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1029</x><y>259</y><w>147</w><h>77</h></coordinates><panel_attributes>/&lt;java interface&gt;/
+*IService*
+--
+insert(idClient:long, amount:double):boolean
+getAll():List&lt;Order&gt;
+delete(id:long):boolean
+findById(id:long):Order:
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1029</x><y>378</y><w>147</w><h>70</h></coordinates><panel_attributes>/&lt;java class&gt;/
+*ServiceImpl*
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1092</x><y>329</y><w>21</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>938</x><y>329</y><w>105</w><h>91</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>130;110;80;110;80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>721</x><y>371</y><w>322</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>440;80;330;80;330;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1281</x><y>266</y><w>147</w><h>182</h></coordinates><panel_attributes>/&lt;java class&gt;/
+*MicroController*
+--
+
+
+*GET*
+*POST*
+*DELETE*
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1169</x><y>294</y><w>126</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>160;90;90;90;90;10;10;10</additional_attributes></element></diagram>
