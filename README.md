@@ -1,10 +1,5 @@
 
 # Microservicios con Spring Cloud Essentials<h1>
-    </td>
-  </tr>
-  </tbody>
-<table>
-</div>
 
 **Plataforma de Laboratorios**
 
