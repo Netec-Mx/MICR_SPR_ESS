@@ -1,4 +1,4 @@
-# ![Logo](img src="./images/logonetec.png" width="250px")
+# ![Logo](img src="./images/neteclogo.png" width="250px")
 
   
 # Microservicios con Spring Cloud Essentials<h1>
