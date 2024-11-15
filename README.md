@@ -19,13 +19,16 @@ Bienvenido a la **Plataforma de Laboratorios** del curso **Microservicios con Sp
 # Lista de Laboratorios
 Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia práctica. Haz clic en los enlaces para comenzar.
 
+
 01. ### [Sistema Monolítico Net Core 8](./Capitulo1/README.md)
     - **Descripción**: Despliegue y análisis de una aplicación monolítica en **.net core 8**
     - ⏱️ **Duración estimada**: 45 min
 
+
 02. ### [Servicio de descubrimiento con microservicios](./Capitulo2/README.md)
     - **Descripción**: Implementación del servidor Eureka para el registro de microservicios.
     - ⏱️ **Duración estimada**: 45 min
+
 
 03. ### [Diseño de microservicio con Spring Boot](./Capitulo3/README.md)
     - **Descripción**: Desarrollo de un microservicio usando Spring Boot 
