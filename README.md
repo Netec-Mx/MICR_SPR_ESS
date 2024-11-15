@@ -1,12 +1,7 @@
-<div>
-<table>
-  <tbody>
-      <tr>
-    <td> 
-        <img src="./images/neteclogo.png" width="250px">
-    <td>
-    <td>
-      <h1>Microservicios con Spring Cloud Essentials<h1>
+# ![Logo](img src="./images/neteclogo.png" width="250px")
+
+  
+# Microservicios con Spring Cloud Essentials<h1>
     </td>
   </tr>
   </tbody>
