@@ -1,0 +1,61 @@
+﻿@using MVCMonolitico.Models.Entities
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+
+
+<div class="container-fluid">
+    <h2>Manejo de productos</h2>
+    <div class="container-fluid">
+        <form class="form" action="/Item/SaveItem" method="post">
+            <label>Name:</label>
+            <input required=true name="Name" /> <br />
+            <label>Description: </label>
+            <input type="text" required=true name="Description" /><br />
+            <label>Brand: </label>
+            <input type="text" name="Brand" /><br />
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <br />
+
+    <div class="container-fluid">
+        <h2>Usuarios</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>BRAND</th>
+                    <th>Delete</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in (List<Item>)ViewData["Items"])
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.Brand</td>
+                        <td>
+                            <form action="/Item/DeleteItem" method="get">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" action="/Item/DeleteItem">eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLUseCase</id><coordinates><x>120</x><y>168</y><w>228</w><h>204</h></coordinates><panel_attributes>lt=.
+IDP
+Keycloak
+/running in cointainer/
+/port: 80/
+fg=blue
+bg=#03a5fc
+fontsize=20
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>192</x><y>516</y><w>72</w><h>132</h></coordinates><panel_attributes>Client
+lw=5</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>84</x><y>360</y><w>144</w><h>192</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=5
+fg=#1c7027
+cbase=l
+Request token
+{user, password}
+</panel_attributes><additional_attributes>100;10;100;140</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>360</y><w>108</w><h>192</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=5
+fg=#1c7027
+cbase=r
+send token
+*jwt*</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>804</x><y>108</y><w>552</w><h>540</h></coordinates><panel_attributes>*MicroserviceClient*
+--
+bg=white
+lw=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>816</x><y>144</y><w>240</w><h>312</h></coordinates><panel_attributes>*security*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>192</y><w>156</w><h>48</h></coordinates><panel_attributes>*/java class/*
+JwtConverter</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>276</y><w>168</w><h>48</h></coordinates><panel_attributes>*/java class/*
+JwtConverterProperties</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>360</y><w>168</w><h>48</h></coordinates><panel_attributes>*/java class/*
+SecurityConfig</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1152</x><y>144</y><w>144</w><h>72</h></coordinates><panel_attributes>*entities*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1152</x><y>240</y><w>144</w><h>72</h></coordinates><panel_attributes>*services*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1152</x><y>336</y><w>156</w><h>72</h></coordinates><panel_attributes>*dao*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1152</x><y>432</y><w>156</w><h>72</h></coordinates><panel_attributes>*controller*
+--
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>480</y><w>252</w><h>156</h></coordinates><panel_attributes>*application.properties*
+--
+*MicroserviceName*
+*Server port*
+*hibernate config*
+*datasourceconfig*
+*security config*
+
+bg=#1c7027</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>228</y><w>492</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;
+lw=5
+fg=#1c7027
+cbase=u
+*register idp in Spring Boot App*
+fontsize=16
+</panel_attributes><additional_attributes>10;40;390;40</additional_attributes></element><element><id>Relation</id><coordinates><x>252</x><y>492</y><w>576</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=5
+fg=#1c7027
+cbase=u
+*Send Request with Bearer Token*
+fontsize=16
+</panel_attributes><additional_attributes>460;40;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>588</y><w>588</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=5
+fg=#1c7027
+cbase=d
+*Get Response | 403 forbidden*
+fontsize=16
+</panel_attributes><additional_attributes>10;10;470;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>144</x><y>468</y><w>36</w><h>36</h></coordinates><panel_attributes>*1*
+fontsize=12
+fg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>552</x><y>192</y><w>36</w><h>36</h></coordinates><panel_attributes>*2*
+fontsize=12
+fg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>516</x><y>636</y><w>36</w><h>36</h></coordinates><panel_attributes>*3*
+fontsize=12
+fg=red
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
