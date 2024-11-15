@@ -1,12 +1,17 @@
-# 2. Servicio de Descubrimiento con microservicios
-En este laboratorio se implementa un microservicio escalado horizontalmente con el servicio de descubrimiento Eureka
+# Práctica 2. Servicio de descubrimiento con microservicios
 
+## Descripción:
 
-## Objetivos
-- Comprender la estructura de un microservicio
-- Implementar el servicio de descubrimiento Eureka
-- Registrar microservicio
-- Escalado horizontal del microservicio
+En este laboratorio implementarás un microservicio escalado horizontalmente con el servicio de descubrimiento Eureka.
+
+## Objetivos:
+
+Al finalizar la práctica, serás capaz de:
+
+- Comprender la estructura de un microservicio.
+- Implementar el servicio de descubrimiento Eureka.
+- Registrar microservicio.
+- Escalado horizontal del microservicio.
 
 ---
 <div style="width: 400px;">
@@ -14,14 +19,14 @@ En este laboratorio se implementa un microservicio escalado horizontalmente con 
             <tr>
                 <td style="text-align: center;">
                     <a href="../Capitulo1/README.md"><img src="../images/anterior.png" width="40px"></a>
-                    <br>anterior
+                    <br>Anterior
                 </td>
                 <td style="text-align: center;">
-                   <a href="../README.md">Lista Laboratorios</a>
+                   <a href="../README.md">Lista de laboratorios</a>
                 </td>
 <td style="text-align: center;">
                     <a href="../Capitulo3/README.md"><img src="../images/siguiente.png" width="40px"></a>
-                    <br>siguiente
+                    <br>Siguiente
                 </td>
             </tr>
         </table>
@@ -29,38 +34,36 @@ En este laboratorio se implementa un microservicio escalado horizontalmente con 
 
 ---
 
-## Diagrama
+## Objetivo visual: 
 
 ![Implementacion](../images/2/inicial.png)
 
 <br>
 
+## Instrucciones:
 
-## Instrucciones
-### Configuración de micro-item
-1. Descargar el proyecto de Spring Boot de la carpeta [Capitulo2](../Capitulo2/) llamado **MicroserviceItem**
+### Tarea 1: Configuración de micro-item.
 
-2. Abrir el proyecto en Spring Tool Suite **File**->**Import**->**Existing Maven projects**
+1. Descarga el proyecto de Spring Boot de la carpeta [Capitulo2](../Capitulo2/) llamado **MicroserviceItem**.
 
-3. Analizar la estructura del proyecto
+2. Abre el proyecto en Spring Tool Suite **File** > **Import** > **Existing Maven projects**.
+
+3. Analiza la estructura del proyecto.
 
 ![estructura proyecto](../images/2/1.png)
 
-4. Iniciar el proyecto <br>
-**Click Derecho al Proyecto**-> **Run As**->**Spring Boot App**
+4. Inicia el proyecto: <br>
 
-5. Iniciar un cliente para API's **Postman** ó **Insomnia**
+**Clic derecho al Proyecto** > **Run As** > **Spring Boot App**.
 
-6. Probar los siguientes endpoints
+5. Inicia un cliente para API's **Postman** o **Insomnia**.
+
+6. Prueba los siguientes endpoints: <br>
     - ## **GET** (*obtiene todos los productos*): http://localhost:8081/item
 
-    <img src="../images/2/2.png" width="500px">
+    <img src="../images/2/2.png" width="500px"><br>
 
-    <br><br>
-
-    - ## **POST** (*inserta un nuevo producto*): http://localhost:8081/item
-
-    <br>
+    - ## **POST** (*inserta un nuevo producto*): http://localhost:8081/item <br>
 
     **Body format**
 
@@ -72,15 +75,11 @@ En este laboratorio se implementa un microservicio escalado horizontalmente con 
 	"description":"jamón de pavo"
     }
     ```
-    <img src="../images/2/3.png" width="500px">
+    <img src="../images/2/3.png" width="500px"><br>
 
-    <br><br>
+    - ## **DELETE** (*eliminar un producto por ID*): http://localhost:8081/item?id=2
 
-    - ## **DELETE** (*eliminar un producto por id*): http://localhost:8081/item?id=2
-
-    <img src="../images/2/4.png" width="500px">
-
-    <br><br>
+    <img src="../images/2/4.png" width="500px"><br>
 
     - ## **PUT** (*actualiza un producto*): http://localhost:8081/item
 
@@ -98,32 +97,34 @@ En este laboratorio se implementa un microservicio escalado horizontalmente con 
 
     <img src="../images/2/5.png" width="500px">
 
+### Tarea 2. Creación de Microservice Eureka.
 
+> Este microservicio nos permitirá llevar el registro de nuestros microservicios.
 
-## Creación de Microservice Eureka 
-> Este microservicio nos permitirá llevar el registro de nuestros microservicios. 
- 1. Abrir Spring Tool Suite
- 2. Crear un proyecto nuevo **File** -> **New** -> **Spring Starter Project**
+ 1. Abre Spring Tool Suite.
+ 
+ 2. Crea un proyecto nuevo **File** > **New** > **Spring Starter Project**.
 
- 3. Configuración inicial
-    - **Name**: MicroserviceEureka
-    - **Type**: Maven
-    - **Packaging**: Jar
-    - **Language**: Java
-    - **Java Versión**: 17
-    - **Group**: com.bancolombia
-    - **Version**: 1.0.0
-    - **Description**: my discovery server
-    - **Package**: com.bancolombia.app
+ 3. Configuración inicial:
 
-4. Dependencies
-    - **Spring Boot DevTools**
-    - **Eureka Server**
+    - **Name**: MicroserviceEureka <br>
+    - **Type**: Maven<br>
+    - **Packaging**: Jar<br>
+    - **Language**: Java<br>
+    - **Java Versión**: 17<br>
+    - **Group**: com.bancolombia<br>
+    - **Version**: 1.0.0<br>
+    - **Description**: my discovery server<br>
+    - **Package**: com.bancolombia.app<br>
+
+5. Dependencies:<br>
+    - **Spring Boot DevTools**<br>
+    - **Eureka Server**<br>
     - **Spring Web**
 
-5. Esperar unos minutos en lo que termina de construir el proyecto (*aprox. 1 min*)
+6. Espera unos minutos en lo que termina de construir el proyecto (*aproximadamanete 1 minuto*).
 
-6. Configuración archivo de properties **MicroserviceEureka**->**src/main/resources**->**application.properties**
+7. Configuración archivo de properties: **MicroserviceEureka** > **src/main/resources** > **application.properties**.
 
 ```properties
 spring.application.name=micro-eureka
@@ -135,7 +136,7 @@ eureka.client.fetch-registry=false
 eureka.server.max-threads-for-peer-replication=0
 ```
 
-7. Activar Eureka Server en la clase principal **MicroserviceEureka**->**src/main/java**->**com.bancolombia.app**->**MicroserviceEurekaApplicacion.java**
+8. Activa Eureka Server en la clase principal: **MicroserviceEureka** > **src/main/java** > **com.bancolombia.app** > **MicroserviceEurekaApplicacion.java**.
 
 ```java
 package com.bancolombia.app;
@@ -156,18 +157,17 @@ public class MicroserviceEurekaApplication {
 
 ```
 
-8. Iniciar la aplicación **Click derecho en el proyecto** -> **Run As** -> **Spring Boot App**
+9. Inicia la aplicación: **Clic derecho en el proyecto** > **Run As** > **Spring Boot App**.
 
-9. Abrir un explorador web y escribir la siguiente ruta **http://localhost:9999** *debería abrir el dashboard de eureka**
+10. Abre un explorador web y escribe la siguiente ruta: **http://localhost:9999** *(debería abrir el dashboard de Eureka)*.
 
 <img src="../images/2/6.png" width="700px">
 
+### Tarea 3. Configuración MicroserviceItem con Eureka.
 
-## Configuración MicroserviceItem con eureka
+1. Abre el archivo **pom.xml** y añade la siguiente dependencia:
 
-
-1. Abrir el archivo **pom.xml** y añadir la siguiente dependencia
-> **IMPORTANTE**: *Si descargaste el proyecto **MicroserviceItem** del repositorio del curso no es necesario añadir la dependencia, sólo válida que exista en el pom.xml*
+> **IMPORTANTE**: *Si descargaste el proyecto **MicroserviceItem** del repositorio del curso, no es necesario añadir la dependencia, sólo valida que exista en el pom.xml*.
 
 ```xml
 <dependency>
@@ -176,7 +176,7 @@ public class MicroserviceEurekaApplication {
 </dependency>
 ```
 
-2. Abrir el archivo **application.properties** **MicroserviceItem**->**src/main/resources**->**application.properties**y módifica la configuración con la siguiente 
+2. Abre el archivo: **application.properties** **MicroserviceItem** > **src/main/resources** > **application.properties** y modifica la configuración con la siguiente: 
 
 ```properties
 spring.application.name=micro-item
@@ -186,36 +186,35 @@ server.port=8081
 eureka.client.service-url.defaultZone=http://localhost:9999/eureka
 ```
 
-3. Guarda todo e inicia el microservicio de nuevo **Click derecho al proyecto** -> **Run As** -> **Spring Boot App**
+3. Guarda todo e inicia el microservicio de nuevo: **Clic derecho al proyecto** > **Run as** > **Spring Boot App**.
 
 
-## Validar registro de MicroserviceItem en Eureka
+### Tarea 4. Validar el registro de MicroserviceItem en Eureka.
 
-1. Abrir un explorador web y abre el siguiente url: **http://localhost:9999**
+1. Abre un explorador web y abre el siguiente URL: **http://localhost:9999**.
 
-> **IMPORTANTE**: Válidar que el microservicio este registrado cómo en la imágen siguiente:
+> **IMPORTANTE**: Valida que el microservicio esté registrado como en la imagen siguiente:
 
 <img src="../images/2/7.png" width="800px">
 
-## Levantar segunda instancia de MicroserviceItem
-1. **Click Derecho al proyecto MicroserviceItem** -> **Run As**->**Run Configurations** y realizar los siguiente:
+### Tarea 5. Levantar segunda instancia de MicroserviceItem.
+
+1. **Clic derecho al proyecto MicroserviceItem** > **Run As** > **Run Configurations** y realizar lo siguiente:
 
 ![pasos](../images/2/8.png)
 
 - ## Explicación: <br>
-    1. Seleccionar el microservicio Item
-    2. Seleccionar **Arguments**
-    3. Escribir el siguiente argumento: **-Dserver.port=8082** (*este argumento levantará una nueva instancia del microservicio item en el puerto 8082*)
-    4. **Run**: Inicia la instancia
+    1. Seleccionar el microservicio Item. <br>
+    2. Seleccionar **Arguments**.<br>
+    3. Escribir el siguiente argumento: **-Dserver.port=8082** (*este argumento levantará una nueva instancia del microservicio item en el puerto 8082*).<br>
+    4. **Run**: Inicia la instancia.<br>
 
-> **NOTA**: Si el puerto esta usado por otra aplicación modificar el argumento
+> **NOTA**: Si el puerto está usado por otra aplicación, modifica el argumento.
 
+### Tarea 5 (opcional). Probar los endpoints de la segunda instancia.
 
-## (Opcional) Probar los endpoints de la segunda instancia 
+> **NOTA**: Para este paso, usa POSTMAN o INSOMNIA.
 
-> **NOTA**: Para este paso usar a POSTMAN o INSOMNIA 
-
-
-## Resultado esperado
+## Resultado esperado:
 
 ![resultado](../images/2/9.png)
