@@ -1,5 +1,4 @@
-
-# Microservicios con Spring Cloud Essentials<h1>
+# Microservicios con Spring Cloud Essentials
 
 **Plataforma de Laboratorios**
 
