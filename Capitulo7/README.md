@@ -1,4 +1,4 @@
-# 7. CI/CD Github Actions
+# Práctica 7. CI/CD Github Actions
 
 En este laboratorio exploraremos la integración continúa usando Github Actions y el almacenamiento de nuestra imagen Docker en Docker hub
 
