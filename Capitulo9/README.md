@@ -1,4 +1,4 @@
-# 9. Monitoreo de Microservicios con Prometheus y Grafana
+# Práctica 9. Monitoreo de Microservicios con Prometheus y Grafana
 
 La empresa netec requiere que se pueda monitorear el microservicio cliente para visualizar la cantidad y tipos de logs. Aunque requieren que estas metrícas puedan verse gráficamente.
 
