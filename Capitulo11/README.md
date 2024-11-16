@@ -1,4 +1,4 @@
-# 11. Proyecto Final 
+# Práctica 11. Proyecto Final 
 La empresa netec requiere una implementación en microservicios para controlar el sistema de articulos y el carrito de compras.
 Para netec es importante el buen diseño de las  aplicaciones, porque se piensa agregar más en un futuro. Y también la carga de trabajo es variable.
 
