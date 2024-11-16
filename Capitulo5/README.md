@@ -1,4 +1,4 @@
-# 5. Aislando configuración de microservicio con Spring Cloud
+# Práctica 5. Aislando configuración de microservicio con Spring Cloud
 En la empresa netec se requiere implementar un servicio que permite externalizar la configuración de los microservicios, para cumplir con los 12 factores de heroku. 
 
 ## Objetivos
