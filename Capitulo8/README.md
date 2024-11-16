@@ -1,4 +1,4 @@
-# 8. Despliegue de microservicios con Kubernetes Local
+# Práctica 8. Despliegue de microservicios con Kubernetes Local
 En este laboratorio exploraremos el uso de CI/CD para la creación automatica de imagenes
 y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**
 
