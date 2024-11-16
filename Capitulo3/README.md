@@ -45,16 +45,15 @@ Al finalizar la práctica, serás capaz de:
 
 Esta práctica se separa en las siguientes secciones:
 
-- **[Configuración MySQL](#configuración-mysql-instrucciones)**
+- **[Tarea 1. Configuración MySQL](#tarea-1-configuración-mysql-instrucciones)**
 - **[Codificación Microservicio](#codificación-microservicio-instrucciones)**
 - **[Resultado esperado](#resultado-esperado-instrucciones)**
 
+## Tarea 1. Configuración MySQL: [Instrucciones](#instrucciones)
 
-## Configuración MySQL [Instrucciones](#instrucciones)
+1. Abre **MySQL 8 Command Line  Client**.
 
-1. Abrir **MySQL 8 Command Line  Client** 
-
-> **NOTA** Es posible que nos pida un password, este password se encuentra en un archivo en el escritorio de la máquina virtual (ó si se esta usando su equipo de cómputo escribir el password configurado)
+> **NOTA:** Es posible que te solicite un password, este se encuentra en un archivo en el escritorio de la máquina virtual (o si estás utilizando tu equipo de cómputo, escribe el password configurado)
 
 <img src="../images/3/1.png" width="500px">
 
