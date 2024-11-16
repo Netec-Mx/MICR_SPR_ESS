@@ -1,4 +1,4 @@
-# 10. Microfrontend con Angular 18
+# Práctica 10. Microfrontend con Angular 18
 En este laboratorio se explora las bases de los microfrontends usando 
 **native-federation** en angular 18
 
