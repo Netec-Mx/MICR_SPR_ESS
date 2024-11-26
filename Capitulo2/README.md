@@ -18,14 +18,14 @@ Al finalizar la práctica, serás capaz de:
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo1/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo1/"><img src="../images/anterior.png" width="40px"></a>
                     <br>Anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista de laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo3/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo3/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>Siguiente
                 </td>
             </tr>
