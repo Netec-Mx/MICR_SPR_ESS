@@ -13,14 +13,14 @@ En una empresa de ventas solicitan 2 módulos que se van a comunicar entre ellos
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo3/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo3/"><img src="../images/anterior.png" width="40px"></a>
                     <br>anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo5/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo5/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>

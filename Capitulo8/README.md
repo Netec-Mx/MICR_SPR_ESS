@@ -13,14 +13,14 @@ y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo7/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo7/"><img src="../images/anterior.png" width="40px"></a>
                     <br>anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo9/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo9/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>

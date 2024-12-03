@@ -24,7 +24,7 @@ navegación-->
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo2/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo2/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>

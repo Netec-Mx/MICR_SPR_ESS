@@ -12,14 +12,14 @@ Crear un microservicio dedicado a la gestión de clientes que permita registrar,
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo2/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo2/"><img src="../images/anterior.png" width="40px"></a>
                     <br>anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo4/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo4/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>

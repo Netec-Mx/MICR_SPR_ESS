@@ -12,14 +12,14 @@ En la empresa netec se requiere implementar un servicio que permite externalizar
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo4/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo4/"><img src="../images/anterior.png" width="40px"></a>
                     <br>anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo6/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo6/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>

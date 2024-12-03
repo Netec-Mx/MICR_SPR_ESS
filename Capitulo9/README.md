@@ -14,14 +14,14 @@ La empresa netec requiere que se pueda monitorear el microservicio cliente para 
         <table width="50%">
             <tr>
                 <td style="text-align: center;">
-                    <a href="../Capitulo8/README.md"><img src="../images/anterior.png" width="40px"></a>
+                    <a href="../Capitulo8/"><img src="../images/anterior.png" width="40px"></a>
                     <br>anterior
                 </td>
                 <td style="text-align: center;">
                    <a href="../README.md">Lista Laboratorios</a>
                 </td>
 <td style="text-align: center;">
-                    <a href="../Capitulo10/README.md"><img src="../images/siguiente.png" width="40px"></a>
+                    <a href="../Capitulo10/"><img src="../images/siguiente.png" width="40px"></a>
                     <br>siguiente
                 </td>
             </tr>
