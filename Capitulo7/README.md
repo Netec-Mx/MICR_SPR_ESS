@@ -4,9 +4,9 @@ En este laboratorio exploraremos la integración continúa usando Github Actions
 
 ## Objetivos
 - Almacenar el código de un microservicio en un repositorio remoto. 
-- Explorar las funcionalidades de **Github Actions**
-- Crear un pipeline en **Github Actions**
-- Construir una imagen de docker en **Github Actions**
+- Explorar las funcionalidades de **Github Actions**.
+- Crear un pipeline en **Github Actions**.
+- Construir una imagen de docker en **Github Actions**.
 
 ---
 
@@ -37,7 +37,7 @@ En este laboratorio exploraremos la integración continúa usando Github Actions
 ![diagrama](../images/7/diagrama.png)
 
 
-> **IMPORTANTE**: Antes de comenzar es necesario tener una cuenta gratuita de **github** y de **docker hub**, en caso con no contar con ellas crearse las cuentas
+> **IMPORTANTE**: Antes de comenzar es necesario tener una cuenta gratuita de **github** y de **docker hub**, en caso con no contar con ellas crearse las cuentas.
 en los siguientes enlaces: **[Github](https://github.com/)**, **[Docker hub](https://hub.docker.com/)**
 
 > **IMPORTANTE**: Necesitaremos tu usuario y password de la cuenta de **Dockerhub** más adelante en este Lab
@@ -46,29 +46,25 @@ en los siguientes enlaces: **[Github](https://github.com/)**, **[Docker hub](htt
 Este laboratorio esta dividido en 3 secciones. 
 
 1. **[Configuración Github](#configuración-github-instrucciones)**
-
-
 2. **[Github Action](#github-action-instrucciones)**
-
-
 3. **[Resultado Esperado](#resultado-esperado-instrucciones)**
 
 ## Configuración Github [Instrucciones](#instrucciones)
-1. Para esta primera parte necesitaremos el microservicio item, lo podemos encontrar en la carpeta **[Capitulo6](../Capitulo6/)**
+1. Para esta primera parte necesitaremos el microservicio item, lo podemos encontrar en la carpeta **[Capitulo6](../Capitulo6/)**.
 
-2. Descargar el **MicroservicieItem**
+2. Descargar el **MicroservicieItem**.
 
-3. **(Opcional)** Abrir el Proyecto en **Visual Studio Code** validar su estructura y **asegurarse que en la raíz del proyecto este el archivo Dockerfile**
+3. **(Opcional)** Abrir el Proyecto en **Visual Studio Code** validar su estructura y **asegurarse que en la raíz del proyecto este el archivo Dockerfile**.
 
 
     <img src="../images/7/1.png" width="200px">
 
-4. Abrir https://github.com/ e iniciar sesión en su cuenta de **Github**
+4. Abrir https://github.com/ e iniciar sesión en su cuenta de **Github**.
 
     <img src="../images/7/2.png" width="300px">
 
 
-5. Crear un nuevo repositorio 
+5. Crear un nuevo repositorio.
 
     <img src="../images/7/3.png" width="300px">
 
@@ -78,7 +74,7 @@ Este laboratorio esta dividido en 3 secciones.
 
     <img src="../images/7/4.png" width="500px">
 
-7. Copiar url HTTPS 
+7. Copiar url HTTPS. 
 
     <img src="../images/7/5.png" width="500px">
 
@@ -86,7 +82,7 @@ Este laboratorio esta dividido en 3 secciones.
 
     <img src="../images/7/6.png" width="500px">
 
-9. Ejecutar el siguiente comando
+9. Ejecutar el siguiente comando:
 
     ```bash
     git clone https_url
@@ -94,39 +90,39 @@ Este laboratorio esta dividido en 3 secciones.
 
     <img src="../images/7/7.png" width="500px">
 
-10. En la carpeta **MSClase** que se creo por el comando anterior pegaremos la carpeta del proyecto **MicroservicieItem**
+10. En la carpeta **MSClase** que se creo por el comando anterior, pegar la carpeta del proyecto **MicroservicieItem**.
 
     <img src="../images/7/8.png" width="500px">
 
 
-11. Abrimos una nueva terminal en la carpeta **MSClase** y ejecutaremos los siguientes comandos 
+11. Abrir una nueva terminal en la carpeta **MSClase** y ejecutar los siguientes comandos: 
 
-    **Añade los archivo a la cola de confirmación**
+    **Añadir los archivo a la cola de confirmación**
     ```bash
     git add .
     ```
 
-    **Confirmamos los archivos**
+    **Confirmar los archivos**
     ```bash
     git commit -m "proyecto item"
     ```
 
-    **Cargamos los archivos al repositorio de Github**
+    **Cargar los archivos al repositorio de Github**
     ```bash
     git push --set-upstream origin main
     ```
 
-> **IMPORTANTE**: El comando git push le pedirá que inicie sesión usando su cuenta de **Github**
+> **IMPORTANTE**: El comando git push le pedirá que inicie sesión usando su cuenta de **Github**.
 
 
-12. Abrir su cuenta de github usando un explorador web y navegar hasta su repositorio **MSClase**. Debería de observar su proyecto **MicroservicieItem**
+12. Abrir su cuenta de Github usando un explorador web y navegar hasta su repositorio **MSClase**. Debería de observar el proyecto **MicroservicieItem**.
 
     <img src="../images/7/9.png" width="400px">
 
-13. Ahora añadiremos 2 secretos en nuestro repositorio de Github que usaremos para nuestro **Github Action**
-    - Dentro de nuestro repositorio abrimos **Settings**
-    - Ahora **Security**->**Secrets and Variables**->**Actions**
-    - **New repository secret** (2 veces)
+13. Añadir 2 secretos en nuestro repositorio de Github que usaremos para nuestro **Github Action**.
+    - Dentro de nuestro repositorio abrimos **Settings**.
+    - Ahora **Security**->**Secrets and Variables**->**Actions**.
+    - **New repository secret** (2 veces).
         - DOCKER_USERNAME: **TU USUARIO DE DOCKER**
         - DOCKER_PASSWORD: **TU PASSWORD DE DOCKER**
 
@@ -138,15 +134,15 @@ Este laboratorio esta dividido en 3 secciones.
 
 ## Github Action [Instrucciones](#instrucciones)
 
-1. Estando en el repositorio **MSClase** dentro de github ir a la pestaña **Actions**
+1. Estando en el repositorio **MSClase** dentro de Github ir a la pestaña **Actions**.
 
     <img src="../images/7/11.png" width="500px">
 
-2. Abrir **set up a workflow yourself**
+2. Abrir **set up a workflow yourself**.
 
     <img src="../images/7/12.png" width="500px">
 
-3. Pegar el siguiente **workflow**
+3. Pegar el siguiente **workflow**.
 
 ```yaml
 name: MicroserviceItem CI/CD
@@ -195,19 +191,19 @@ jobs:
           docker tag ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/myapp:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
 ```
-4. **Commit changes**
+4. **Commit changes**.
 
     <img src="../images/7/13.png" width="500px">
 
-5. Configuración commit 
+5. Configuración commit. 
 
     <img src="../images/7/14.png" width="500px">
 
-6. Esperar unos minutos y regresar a la pestaña **Actions** y validar que el flujo se haya ejecutado completo
+6. Esperar unos minutos y regresar a la pestaña **Actions** y validar que el flujo se haya ejecutado completo.
 
     <img src="../images/7/15.png" width="500px">
 
-7. Abrir tu **Docker hub** y buscar el repositorio creado por el flujo de **Github Actions**
+7. Abrir tu **Docker hub** y buscar el repositorio creado por el flujo de **Github Actions**.
 
     <img src="../images/7/16.png" width="500px">
 
