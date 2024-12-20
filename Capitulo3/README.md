@@ -5,7 +5,7 @@
 
 Crear un microservicio dedicado a la gestión de clientes que permita registrar, actualizar, consultar y eliminar información de clientes de manera segura y eficiente. Este microservicio deberá integrarse en un sistema más amplio en un futuro. 
 
-## Objetivos:
+## Objetivos de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
@@ -14,6 +14,9 @@ Al finalizar la práctica, serás capaz de:
 - Utilizar Spring Data JPA para la creación del repositorio de datos.<br>
 - Implementar un controlador que expone las operaciones de http fuera del microservicio.
 
+## Duración aproximada
+- 60 minutos.
+  
 ---
 
 <div style="width: 400px;">
@@ -76,8 +79,8 @@ create database micro1;
 
 ## Codificación Microservicio [Instrucciones](#instrucciones)
 
-1. Abrir **Spring Tool Suite**
-2. Crear un nuevo proyecto **File**->**New**->**Spring Starter Project**
+1. Abrir **Spring Tool Suite**.
+2. Crear un nuevo proyecto **File**->**New**->**Spring Starter Project**.
 
 <img src="../images/3/3.png" width="500px">
 
@@ -100,7 +103,7 @@ create database micro1;
 
 5. Esperar a que el proyecto termine de crearse. 
 
-6. Crear los paquetes donde pondremos el código **src/main/java**->**com.bancolombia.app CLICK DERECHO**-> **new**-> **package** **x4**
+6. Crear los paquetes donde pondremos el código **src/main/java**->**com.bancolombia.app CLICK DERECHO**-> **new**-> **package** **x4**.
 
 - **entities**
 - **dao**
@@ -109,7 +112,7 @@ create database micro1;
 
 <img src="../images/3/4.png" width="500px">
 
-7. En el paquete **entities** añadir el siguiente código
+7. En el paquete **entities** añadir el siguiente código.
 
 **Client.java** (*java class*)
 
@@ -362,7 +365,7 @@ public class MicroController {
 }
 ```
 
-11. Abrir el archivo **application.properties**, **MicroserviceClient**->**src/main/resources**->**application.properties**
+11. Abrir el archivo **application.properties**, **MicroserviceClient**->**src/main/resources**->**application.properties**.
 
 **application.properties**
 
@@ -380,15 +383,15 @@ spring.datasource.username=root
 spring.datasource.password=1234
 ```
 
-12. Iniciar la aplicación **Click Derecho en el proyecto**->**Run As**->**Spring Boot App**
+12. Iniciar la aplicación **Click derecho en el proyecto**->**Run As**->**Spring Boot App**.
 
 
 ## Resultado esperado [Instrucciones](#instrucciones)
 > **NOTA**: Para realizar las pruebas es necesario iniciar la aplicación
 
-1. Abrir **POSTMAN** o **INSOMNIA**
+1. Abrir **POSTMAN** o **INSOMNIA**.
 
-2. Probar los siguientes enpoints
+2. Probar los siguientes enpoints.
 
 - ## POST (*insertar cliente*): http://localhost:8084/client
 
