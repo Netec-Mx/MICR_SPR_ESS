@@ -14,7 +14,7 @@ Al finalizar la práctica, serás capaz de:
 - Utilizar Spring Data JPA para la creación del repositorio de datos.<br>
 - Implementar un controlador que expone las operaciones de http fuera del microservicio.
 
-## Duración aproximada
+## Duración aproximada:
 - 60 minutos.
   
 ---
