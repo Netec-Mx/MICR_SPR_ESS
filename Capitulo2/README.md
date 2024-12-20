@@ -42,7 +42,7 @@ Al finalizar la práctica, serás capaz de:
 
 ## Instrucciones:
 
-### Tarea 1: Configuración de micro-item.
+### Tarea 1: Configuración de micro-item
 
 1. Descargar el proyecto de Spring Boot de la carpeta [Capitulo2](../Capitulo2/) llamado **MicroserviceItem**.
 
@@ -97,7 +97,7 @@ Al finalizar la práctica, serás capaz de:
 
     <img src="../images/2/5.png" width="500px">
 
-### Tarea 2. Creación de Microservice Eureka.
+### Tarea 2. Creación de Microservice Eureka
 
 > Este microservicio nos permitirá llevar el registro de nuestros microservicios.
 
@@ -163,7 +163,7 @@ public class MicroserviceEurekaApplication {
 
 <img src="../images/2/6.png" width="700px">
 
-### Tarea 3. Configuración MicroserviceItem con Eureka.
+### Tarea 3. Configuración MicroserviceItem con Eureka
 
 1. Abrir el archivo **pom.xml** y añadir la siguiente dependencia:
 
@@ -189,7 +189,7 @@ eureka.client.service-url.defaultZone=http://localhost:9999/eureka
 3. Guardar todo e iniciar el microservicio de nuevo: **Clic derecho al proyecto** > **Run as** > **Spring Boot App**.
 
 
-### Tarea 4. Validar el registro de MicroserviceItem en Eureka.
+### Tarea 4. Validar el registro de MicroserviceItem en Eureka
 
 1. Abrir un explorador web y abre el siguiente URL: **http://localhost:9999**.
 
@@ -197,7 +197,7 @@ eureka.client.service-url.defaultZone=http://localhost:9999/eureka
 
 <img src="../images/2/7.png" width="800px">
 
-### Tarea 5. Levantar segunda instancia de MicroserviceItem.
+### Tarea 5. Levantar segunda instancia de MicroserviceItem
 
 1. **Clic derecho al proyecto MicroserviceItem** > **Run As** > **Run Configurations** y realizar lo siguiente:
 
@@ -211,7 +211,7 @@ eureka.client.service-url.defaultZone=http://localhost:9999/eureka
 
 > **NOTA**: Si el puerto está usado por otra aplicación, modifica el argumento.
 
-### Tarea 5 (opcional). Probar los endpoints de la segunda instancia.
+### Tarea 5 (opcional). Probar los endpoints de la segunda instancia
 
 > **NOTA**: Para este paso, usa POSTMAN o INSOMNIA.
 
