@@ -4,7 +4,7 @@
 
 En este laboratorio implementarás un microservicio escalado horizontalmente con el servicio de descubrimiento Eureka.
 
-## Objetivos:
+## Objetivos de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
@@ -13,6 +13,9 @@ Al finalizar la práctica, serás capaz de:
 - Registrar microservicio.
 - Escalado horizontal del microservicio.
 
+## Duración aproximada
+- 45 minutos.
+  
 ---
 <div style="width: 400px;">
         <table width="50%">
