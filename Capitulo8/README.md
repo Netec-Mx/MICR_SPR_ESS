@@ -1,11 +1,11 @@
 # Práctica 8. Despliegue de microservicios con Kubernetes Local
 En este laboratorio exploraremos el uso de CI/CD para la creación automatica de imagenes
-y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**
+y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**.
 
 ## Objetivos
-- Uso de **Git hub Actions** para generar imágenes de docker
-- Configuración de kubernetes
-- Despliegue de aplicación en kubernetes
+- Uso de **Git hub Actions** para generar imágenes de docker.
+- Configuración de Kubernetes.
+- Despliegue de aplicación en Kubernetes.
 
 ---
 
@@ -36,8 +36,8 @@ y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**
 ![diagrama](../images/8/diagrama.png)
 
 
-> **IMPORTANTE**: Antes de comenzar el laboratorio asegurate de tener un clúster de kubernetes
-configurado, te recomiendo usar **[Minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)** ó puedes usar un clúster en la nube
+> **IMPORTANTE**: Antes de comenzar el laboratorio asegurate de tener un clúster de Kubernetes
+configurado, te recomiendo usar **[Minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)** ó puedes usar un clúster en la nube.
 
 
 ## Instrucciones
@@ -50,31 +50,31 @@ Este laboratorio esta dividido en las siguientes secciones:
 
 ## Creación de imágenes de Docker [instrucciones](#instrucciones)
 1. Para esta sección necesitaremos los proyectos **MicroserviceClient**, **MicroserviceConfig**,
-**MicroserviceEureka** que encontraremos en la carpeta **[Capitulo8](../Capitulo8/)**
+**MicroserviceEureka** que encontraremos en la carpeta **[Capitulo8](../Capitulo8/)**.
 
-2. Cargar los proyectos a un repositorio que llamaremos **MSCap8** en Github
+2. Cargar los proyectos a un repositorio que llamaremos **MSCap8** en Github.
 
 > **NOTA**: Si tienes dudas de cómo cargar los proyectos a Github te recomiendo
-que repases el **[Laboratorio 7](../Capitulo7/README.md)**
+que repases el **[Laboratorio 7](../Capitulo7/README.md)**.
 
-3. Agregar los secretos al repositorio 
+3. Agregar los secretos al repositorio.
 - DOCKER_USERNAME= **tu usuario de docker**
 - DOCKER_PASSWORD= **tu password de docker**
 
     <img src="../images/8/1.png" width="500px">
 
 > **NOTA**: Si tienes dudas de cómo crear los **secrets** te recomiendo
-que repases el **[Laboratorio 7](../Capitulo7/README.md)**
+que repases el **[Laboratorio 7](../Capitulo7/README.md)**.
 
-4. Estando en el repositorio **MSClase** dentro de github ir a la pestaña **Actions**
+4. Estando en el repositorio **MSClase** dentro de Github, ir a la pestaña **Actions**.
 
     <img src="../images/8/2.png" width="500px">
 
-5. Abrir **set up a workflow yourself**
+5. Abrir **set up a workflow yourself**.
 
     <img src="../images/7/12.png" width="500px">
 
-6. Pegar el siguiente **WorkFlow**
+6. Pegar el siguiente **WorkFlow**.
 
 ```yaml
 name: Microservices Build docker hub
@@ -152,23 +152,23 @@ jobs:
 
 
 
-## Despliegue de microservicios en kubernetes [instrucciones](#instrucciones)
+## Despliegue de microservicios en Kubernetes [instrucciones](#instrucciones).
 
-1. Iniciar kubernetes
+1. Iniciar Kubernetes.
 
 ```bash
 minikube start --driver=docker
 ```
 
-2. Esperar que termine de iniciar kubernetes (tarda unos 5 min)
+2. Esperar que termine de iniciar kubernetes (tarda unos 5 min).
 
-3. Crear un nuevo archivo en el escritorio que llamaremos **app-deploy.yaml**
+3. Crear un nuevo archivo en el escritorio que llamaremos **app-deploy.yaml**.
 
-> **IMPORTANTE**: La extensión es muy importante del archivo, asegúrese que si se haya cambiado
+> **IMPORTANTE**: La extensión es muy importante del archivo, asegúrese que si se haya cambiado.
 
-4. Añadir el siguiente contenido al archivo **deploy-app.yaml**
+4. Añadir el siguiente contenido al archivo **deploy-app.yaml**.
 
-> **NOTA**: Este archivo crea 4 servicios y 4 deployments para los 4 microservicios que se ejecutarán dentro del clúster de kubernetes. **No es necesario modificar nada**
+> **NOTA**: Este archivo crea 4 servicios y 4 deployments para los 4 microservicios que se ejecutarán dentro del clúster de Kubernetes. **No es necesario modificar nada**.
 
 ```yaml
 #Services Section
@@ -325,9 +325,9 @@ spec:
 
     <img src="../images/8/4.png" width="500px">
 
-6. Si hemos llegado hasta aquí hemos desplegado nuestros 4 microservicios
+6. Si hemos llegado hasta aquí hemos desplegado nuestros 4 microservicios.
 
-## Resultado Esperado [instrucciones](#instrucciones)
+## Resultado esperado [instrucciones](#instrucciones)
 
 1. Abrir una terminal y ejecutar el siguiente comando:
 
@@ -335,10 +335,10 @@ spec:
 minikube service client-service
 ```
 
-2. El comando anterior nos entregará un url
+2. El comando anterior nos entregará un url.
 
     <img src="../images/8/5.png" width="500px">
 
-3. Copiamos el url y válidamos el funcionamiento de nuestro **Microservicio Cliente** en Insomnia o Postman
+3. Copiamos el url y válidamos el funcionamiento de nuestro **Microservicio Cliente** en Insomnia o Postman.
 
     <img src="../images/8/6.png">
