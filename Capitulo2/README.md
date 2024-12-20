@@ -44,21 +44,21 @@ Al finalizar la práctica, serás capaz de:
 
 ### Tarea 1: Configuración de micro-item.
 
-1. Descarga el proyecto de Spring Boot de la carpeta [Capitulo2](../Capitulo2/) llamado **MicroserviceItem**.
+1. Descargar el proyecto de Spring Boot de la carpeta [Capitulo2](../Capitulo2/) llamado **MicroserviceItem**.
 
-2. Abre el proyecto en Spring Tool Suite **File** > **Import** > **Existing Maven projects**.
+2. Abrir el proyecto en Spring Tool Suite **File** > **Import** > **Existing Maven projects**.
 
-3. Analiza la estructura del proyecto.
+3. Analizar la estructura del proyecto.
 
 ![estructura proyecto](../images/2/1.png)
 
-4. Inicia el proyecto: <br>
+4. Iniciar el proyecto: <br>
 
 **Clic derecho al Proyecto** > **Run As** > **Spring Boot App**.
 
-5. Inicia un cliente para API's **Postman** o **Insomnia**.
+5. Iniciar un cliente para API's **Postman** o **Insomnia**.
 
-6. Prueba los siguientes endpoints: <br>
+6. Probar los siguientes endpoints: <br>
     - ## **GET** (*obtiene todos los productos*): http://localhost:8081/item
 
     <img src="../images/2/2.png" width="500px"><br>
@@ -101,9 +101,9 @@ Al finalizar la práctica, serás capaz de:
 
 > Este microservicio nos permitirá llevar el registro de nuestros microservicios.
 
- 1. Abre Spring Tool Suite.
+ 1. Abrir Spring Tool Suite.
  
- 2. Crea un proyecto nuevo **File** > **New** > **Spring Starter Project**.
+ 2. Crear un proyecto nuevo **File** > **New** > **Spring Starter Project**.
 
  3. Configuración inicial:
 
@@ -122,7 +122,7 @@ Al finalizar la práctica, serás capaz de:
     - **Eureka Server**<br>
     - **Spring Web**
 
-6. Espera unos minutos en lo que termina de construir el proyecto (*aproximadamanete 1 minuto*).
+6. Esperar unos minutos en lo que termina de construir el proyecto (*aproximadamanete 1 minuto*).
 
 7. Configuración archivo de properties: **MicroserviceEureka** > **src/main/resources** > **application.properties**.
 
@@ -136,7 +136,7 @@ eureka.client.fetch-registry=false
 eureka.server.max-threads-for-peer-replication=0
 ```
 
-8. Activa Eureka Server en la clase principal: **MicroserviceEureka** > **src/main/java** > **com.bancolombia.app** > **MicroserviceEurekaApplicacion.java**.
+8. Activar Eureka Server en la clase principal: **MicroserviceEureka** > **src/main/java** > **com.bancolombia.app** > **MicroserviceEurekaApplicacion.java**.
 
 ```java
 package com.bancolombia.app;
@@ -157,15 +157,15 @@ public class MicroserviceEurekaApplication {
 
 ```
 
-9. Inicia la aplicación: **Clic derecho en el proyecto** > **Run As** > **Spring Boot App**.
+9. Iniciar la aplicación: **Clic derecho en el proyecto** > **Run As** > **Spring Boot App**.
 
-10. Abre un explorador web y escribe la siguiente ruta: **http://localhost:9999** *(debería abrir el dashboard de Eureka)*.
+10. Abrir un explorador web y escribir la siguiente ruta: **http://localhost:9999** *(debería abrir el dashboard de Eureka)*.
 
 <img src="../images/2/6.png" width="700px">
 
 ### Tarea 3. Configuración MicroserviceItem con Eureka.
 
-1. Abre el archivo **pom.xml** y añade la siguiente dependencia:
+1. Abrir el archivo **pom.xml** y añadir la siguiente dependencia:
 
 > **IMPORTANTE**: *Si descargaste el proyecto **MicroserviceItem** del repositorio del curso, no es necesario añadir la dependencia, sólo valida que exista en el pom.xml*.
 
@@ -176,7 +176,7 @@ public class MicroserviceEurekaApplication {
 </dependency>
 ```
 
-2. Abre el archivo: **application.properties** **MicroserviceItem** > **src/main/resources** > **application.properties** y modifica la configuración con la siguiente: 
+2. Abrir el archivo: **application.properties** **MicroserviceItem** > **src/main/resources** > **application.properties** y modificar la configuración con la siguiente: 
 
 ```properties
 spring.application.name=micro-item
@@ -186,14 +186,14 @@ server.port=8081
 eureka.client.service-url.defaultZone=http://localhost:9999/eureka
 ```
 
-3. Guarda todo e inicia el microservicio de nuevo: **Clic derecho al proyecto** > **Run as** > **Spring Boot App**.
+3. Guardar todo e iniciar el microservicio de nuevo: **Clic derecho al proyecto** > **Run as** > **Spring Boot App**.
 
 
 ### Tarea 4. Validar el registro de MicroserviceItem en Eureka.
 
-1. Abre un explorador web y abre el siguiente URL: **http://localhost:9999**.
+1. Abrir un explorador web y abre el siguiente URL: **http://localhost:9999**.
 
-> **IMPORTANTE**: Valida que el microservicio esté registrado como en la imagen siguiente:
+> **IMPORTANTE**: Validar que el microservicio esté registrado como en la imagen siguiente:
 
 <img src="../images/2/7.png" width="800px">
 
