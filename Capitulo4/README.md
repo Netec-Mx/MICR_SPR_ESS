@@ -3,9 +3,9 @@
 En una empresa de ventas solicitan 2 módulos que se van a comunicar entre ellos **Cliente** y **Orden** para llevar el registro de las ordenes y almacenarlas en una base de datos
 
 ## Objetivos
-- Implementar Feign para comunicar microservicios
-- Diseñar interface de comunicación Feign
-- Probar la comunicación de microservicios usando postman o insomnia
+- Implementar Feign para comunicar microservicios.
+- Diseñar interface de comunicación Feign.
+- Probar la comunicación de microservicios usando postman o insomnia.
 
 ---
 
@@ -42,9 +42,9 @@ Este lab esta separado en 3 secciones:
 
 ## Configuración MySQL [instrucciones](#instrucciones)
 
-1. Abrir **MySQL 8 Command Line  Client** 
+1. Abrir **MySQL 8 Command Line  Client**. 
 
-> **NOTA** Es posible que nos pida un password, este password se encuentra en un archivo en el escritorio de la máquina virtual (ó si se esta usando su equipo de cómputo escribir el password configurado)
+> **NOTA** Es posible que nos pida un password, este password se encuentra en un archivo en el escritorio de la máquina virtual (ó si se esta usando su equipo de cómputo escribir el password configurado).
 
 <img src="../images/4/2.png" width="500px">
 
@@ -63,18 +63,18 @@ create database micro2;
 - **Server**: localhost
 - **Port**: 3306 
 
-> **Nota**: el puerto y el server pueden cambiar si el servidor de base de datos esta remoto
+> **Nota**: el puerto y el server pueden cambiar si el servidor de base de datos esta remoto.
 
 
 ## Codificación [instrucciones](#instrucciones)
 1. Para este ejercicio es necesario usar el microservicio cliente que se implementó en el módulo anterior. 
 > **Nota** en caso de no tener el **MicroserviceClient** puedes descargarlo de la carpeta **[capitulo4](../Capitulo4/)**
 
-2. Iniciar el microservicio cliente e ignorarlo por el momento
+2. Iniciar el microservicio cliente e ignorarlo por el momento.
 
-3. Crear un nuevo proyecto **File**->**New**->**Spring Starter Project** 
+3. Crear un nuevo proyecto **File**->**New**->**Spring Starter Project**. 
 
-4. Configuración inicial proyecto
+4. Configuración inicial proyecto.
 - **Name**: MicroserviceOrder
 - **Type**: Maven
 - **Packaging**: jar
@@ -85,16 +85,16 @@ create database micro2;
 - **Description**: my order microservice with feign
 - **Package**: com.bancolombia.app
 
-5. Dependencies
+5. Dependencies.
 - **Spring Boot DevTools**
 - **Spring Data JPA**
 - **MySQL Driver**
 - **OpenFeign**
 - **Spring Web**
 
-> **IMPORTANTE**: *Es fundamental esperar a que el proyecto este completamente construido* 
+> **IMPORTANTE**: *Es fundamental esperar a que el proyecto este completamente construido.* 
 
-6. Creamos los paquetes que contendrán nuestro código **MicroserviceOrder** -> **src/main/java** -> **Click Derecho en com.bancolombia.app** -> **New**-> **Package** (6 veces el mismo proceso)
+6. Creamos los paquetes que contendrán nuestro código **MicroserviceOrder** -> **src/main/java** -> **Click Derecho en com.bancolombia.app** -> **New**-> **Package** (6 veces el mismo proceso).
 
 - **entities**
 - **datasource**
@@ -104,7 +104,7 @@ create database micro2;
 - **controller**
 
 ### Paquetes en proyecto
-> **IMPORTANTE**: Asegurarse que sus paquetes se parezcan a los de la imágen
+> **IMPORTANTE**: Asegurarse que sus paquetes se parezcan a los de la imágen.
 
 <img src="../images/4/1.png" width="500px">
 
@@ -124,7 +124,7 @@ spring.datasource.username=root
 spring.datasource.password=1234
 ```
 
-8. Código clase principal **src/main/java**->**com.bancolombia.app** -> **MicroserviceOrderApplication.java**
+8. Código clase principal **src/main/java**->**com.bancolombia.app** -> **MicroserviceOrderApplication.java**.
 
 **Clase principal**
 ```java
@@ -147,7 +147,7 @@ public class MicroserviceOrderApplication {
 ```
 
 
-9. Código paquete **entities**
+9. Código paquete **entities**.
 
 **Client.java**
 ```java
@@ -246,7 +246,7 @@ public class Order {
 }
 ```
 
-10. Código paquete **feign**
+10. Código paquete **feign**.
 
 **IClientFeign.java**
 ```java
@@ -267,7 +267,7 @@ public interface IClientFeign {
 }
 ```
 
-11. Código paquete **datasource**
+11. Código paquete **datasource**.
 
 **IOrderDAO.java**
 ```java
@@ -281,7 +281,7 @@ public interface IOrderDAO extends CrudRepository<Order, Long>{
 }
 ```
 
-12. Código paquete **service**
+12. Código paquete **service**.
 
 **IService.java**
 ```java
@@ -372,7 +372,7 @@ public class ServiceImpl implements IService {
 }
 ```
 
-13. Código paquete **controller**
+13. Código paquete **controller**.
 
 **MicroController.java**
 
@@ -473,10 +473,10 @@ public class MicroController {
 	
 }
 ```
-14. Guardar todo e iniciar la aplicación **Click Derecho en el proyecto** -> **Run As** -> **Spring Boot App**
+14. Guardar todo e iniciar la aplicación **Click Derecho en el proyecto** -> **Run As** -> **Spring Boot App**.
 
 
-## Resultado Esperado [instrucciones](#instrucciones)
+## Resultado esperado [instrucciones](#instrucciones)
 Para validar que todo funciona correctamente probar los siguiente endpoints usando **POSTMAN** | **INSOMNIA**
 
 - ## POST (insertar orden): http://localhost:8087/order?idClient=2&amount=500
