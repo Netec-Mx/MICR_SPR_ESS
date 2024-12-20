@@ -2,10 +2,10 @@
 En la empresa netec se requiere implementar un servicio que permite externalizar la configuración de los microservicios, para cumplir con los 12 factores de heroku. 
 
 ## Objetivos
-- Crear microservicio para aislar la configuración
-- Configuración de Spring Cloud Config
-- Creación de repositorio para la gestión de configuración
-- Pruebas de configuración
+- Crear microservicio para aislar la configuración.
+- Configuración de Spring Cloud Config.
+- Creación de repositorio para la gestión de configuración.
+- Pruebas de configuración.
 
 ---
 <div style="width: 400px;">
@@ -34,7 +34,7 @@ En la empresa netec se requiere implementar un servicio que permite externalizar
 
 
 ## Instrucciones
-Este laboratorio esta separado en 4 secciones
+Este laboratorio esta separado en 4 secciones:
 
 - **[Configuración Git](#configuración-git-instrucciones)**
 - **[Crear MicroserviceConfig](#crear-microserviceconfig-instrucciones)**
@@ -51,23 +51,23 @@ git version
 
 > **NOTA**: En el dado caso que no este instalado, descargarlo del siguiente enlace: https://git-scm.com/downloads
 
-2. Configurar el email global de git
+2. Configurar el email global de git.
 
 ```sh
 git config --global user.email "edgardo.nvf@gmail.com"
 ```
 > **IMPORTANTE**: De preferencia usar un correo electrónico personal
 
-3. Configurar el user global de git
+3. Configurar el user global de git.
 
 ```sh
 git config --global user.name "edgardo"
 ```
 
-> **IMPORTANTE**: Cambiar por su nombre
+> **IMPORTANTE**: Cambiar por su nombre.
 
 
-4. Estando en la terminal de windows dirigirnos al escritorio
+4. Estando en la terminal de windows dirigirse al escritorio.
 
 5. En el escritorio crear una carpeta con el siguiente comando:
 
@@ -102,16 +102,16 @@ spring.datasource.password=1234
 
 <img src="../images/5/3.png" width="500px">
 
-> **IMPORTANTE**: El nombre del archivo debe de ser el mismo nombre que tenga el microservicio client en el archivo **properties**
+> **IMPORTANTE**: El nombre del archivo debe de ser el mismo nombre que tenga el microservicio client en el archivo **properties**.
 
-8. Agregamos los cambios desde la terminal
+8. Agregamos los cambios desde la terminal.
 
 ```bash
 git add .
 ```
 <img src="../images/5/4.png" width="500px">
 
-9. Confirmamos los cambios
+9. Confirmamos los cambios.
 
 ```bash
 git commit -m "configuration"
@@ -129,10 +129,10 @@ git status
 
 ## Crear MicroserviceConfig [Instrucciones](#instrucciones)
 
-1. Abrir **Spring Tool Suite**
-2. Crear un nuevo proyecto **File**-> **New**-> **Spring Starter Project**
+1. Abrir **Spring Tool Suite**.
+2. Crear un nuevo proyecto **File**-> **New**-> **Spring Starter Project**.
 
-3. Configuración Inical proyecto
+3. Configuración Inical proyecto.
 
 - **Name**: MicroserviceConfig
 - **Type**: Maven
@@ -150,9 +150,9 @@ git status
 - **Config Server**
 
 
-5. Esperamos a que el proyecto termine de crearse. 
+5. Esperar a que el proyecto termine de crearse. 
 
-6. Añadimos la anotacion *@EnableConfigServer* en la clase principal **MicroserviceConfig**->**src/main/java**->**com.bancolombia.app**->**MicroserviceConfigApplication.java**
+6. Añadir la anotacion *@EnableConfigServer* en la clase principal **MicroserviceConfig**->**src/main/java**->**com.bancolombia.app**->**MicroserviceConfigApplication.java**
 
 **MicroserviceConfigApplication.java**
 ```java
@@ -173,30 +173,30 @@ public class MicroserviceConfigApplication {
 }
 ```
 
-7. Ahora añadimos la siguiente configuración en el archivo **application.properties**
+7. Ahora, añadir la siguiente configuración en el archivo **application.properties**.
 
 
-8. Guardar todo e iniciar el microservicio **Click Derecho al proyecto MicroserviceConfig**->**Run As**->**Spring Boot App**
+8. Guardar todo e iniciar el microservicio **Click Derecho al proyecto MicroserviceConfig**->**Run As**->**Spring Boot App**.
 
-9. Abrir **POSTMAN** ó **INSOMNIA** y probar el siguiente endpoint
+9. Abrir **POSTMAN** ó **INSOMNIA** y probar el siguiente endpoint.
 
 **GET**
 ```text
 http://localhost:8888/micro-client/default
 ```
- **Deberías de observar el siguiente contenido**
+ **Deberías de observar el siguiente contenido**.
 
 <img src="../images/5/7.png" width="500px">
 
-*Si observas te retorna el contenido del archivo **micro-client.properties** que se encuentra en el repositorio*
+*Si observas te retorna el contenido del archivo **micro-client.properties** que se encuentra en el repositorio.*
 
 
 
 ## Configuración MicroserviceClient [Instrucciones](#instrucciones)
 
-1. Para esta sección necesitaremos al **microservicio cliente** que creamos en el capítulo 3 en el dado caso que no lo tenga, puede descargardo de la carpeta **[Capítulo 5](../Capitulo5/)**
+1. Para esta sección necesitaremos al **microservicio cliente** que creamos en el capítulo 3 en el dado caso que no lo tenga, puede descargarlo de la carpeta **[Capítulo 5](../Capitulo5/)**
 
-2. En el archivo **pom.xml** añadimos la siguiente dependencia en la sección de **< dependencies >**. 
+2. En el archivo **pom.xml** añadir la siguiente dependencia en la sección de **< dependencies >**. 
 
 ```xml
 <dependency>
@@ -205,7 +205,7 @@ http://localhost:8888/micro-client/default
 </dependency>
 ```
 
-3. Módificamos el archivo **application.properties** con el siguiente contenido:
+3. Módificar el archivo **application.properties** con el siguiente contenido:
 
 ```properties
 spring.application.name=micro-client
@@ -215,19 +215,19 @@ spring.config.import=optional:configserver:http://localhost:8888
 ```
 
 
-4. Iniciamos el microservicio cliente **Click Derecho proyecto MicroserviceClient**-> **Run As**-> **Spring Boot App**
+4. Iniciar el microservicio cliente **Click Derecho proyecto MicroserviceClient**-> **Run As**-> **Spring Boot App**.
 
-5. El microservicio debería funcionar con normalidad
+5. El microservicio debería funcionar con normalidad.
 
 
 
-## Resultado Esperado [Instrucciones](#instrucciones)
+## Resultado esperado [Instrucciones](#instrucciones)
 
 > **IMPORTANTE**: Si se ha llegado hasta aquí, el microservicio cliente debería de funcionar igual. Lo único que cambiar es que ahora la configuración ya no esta en el microservicio, si no que ahora se encuentra centralizado en el microservicio config. 
 
-1. Abrir **POSTMAN** o **INSOMNIA**
+1. Abrir **POSTMAN** o **INSOMNIA**.
 
-2. Probar los siguientes enpoints
+2. Probar los siguientes enpoints.
 
 - ## POST (*insertar cliente*): http://localhost:8084/client
 
