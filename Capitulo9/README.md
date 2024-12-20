@@ -1,13 +1,16 @@
 # Práctica 9. Monitoreo de Microservicios con Prometheus y Grafana
 
-La empresa netec requiere que se pueda monitorear el microservicio cliente para visualizar la cantidad y tipos de logs. Aunque requieren que estas metrícas puedan verse gráficamente.
+La empresa Netec requiere que se pueda monitorear el microservicio cliente para visualizar la cantidad y tipos de logs. Aunque requieren que estas metrícas puedan verse gráficamente.
 
-## Objetivos
+## Objetivos de la práctica:
 - Configuración de Spring boot con Prometheus.
 - Consumir métricas en Prometheus y crear gráficas.
 - Conectar Prometheus con Grafana.
 - Crear Grafana dashboards.
 
+## Duración aproximada:
+- 60 minutos.
+  
 ---
 
 <div style="width: 400px;">
@@ -40,7 +43,7 @@ La empresa netec requiere que se pueda monitorear el microservicio cliente para 
 ## Instrucciones
 Este laboratorio esta dividido en las siguientes secciones: 
 
-- **[Configuración prometheus y grafana](#configuración-prometheus-y-grafana-instrucciones)**
+- **[Configuración Prometheus y Grafana](#configuración-prometheus-y-grafana-instrucciones)**
 - **[Configuración MicroserviceClient](#configuración-microserviceclient-instrucciones)**
 - **[Crear dashboard en Grafana](#crear-dashboard-en-grafana-instrucciones)**
 
