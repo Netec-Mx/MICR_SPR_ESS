@@ -1,11 +1,14 @@
 # Práctica 6. Asegurando microservicio con Autenticación JWT
 La empresa Netec requiere que se aseguren los endpoints del microservicio cliente, permitiendo sólo el acceso a aquellos usuarios que esten registrados en el Directorio de Usuarios de la empresa. 
 
-## Objetivos
+## Objetivos de la práctica:
 - Usar Spring Security en microservicio.
 - Implementar autenticación JWT usando a Keycloak.
 - Configuración de identity provider (Keycloak).
 
+## Duración aproximada
+- 60 minutos.
+  
 ---
 
 <div style="width: 400px;">
