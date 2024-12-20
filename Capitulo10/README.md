@@ -1,12 +1,12 @@
 # Práctica 10. Microfrontend con Angular 18
 En este laboratorio se explora las bases de los microfrontends usando 
-**native-federation** en angular 18
+**native-federation** en Angular 18.
 
 ## Objetivos
-- Instalar y configurar native federation
-- Crear un microfrontend
-- Comunicar microfrontend con shell
-- Interactuar con microfrontends con explorador web
+- Instalar y configurar Native Federation.
+- Crear un micro frontend.
+- Comunicar micro frontend con shell.
+- Interactuar con microfrontends con explorador web.
 
 ---
 
@@ -38,29 +38,29 @@ En este laboratorio se explora las bases de los microfrontends usando
 > **IMPORTANTE**: Para realizar este laboratorio se necesita la versión **node 20.18.0** y la versión **angular cli 18.2.5**. 
 
 ## Instrucciones
-1. Abrir una terminal de windows
+1. Abrir una terminal de Windows.
 
-2. Dirigirse en el escritorio y crear una carpeta la llamaremos **microfrontend**
+2. Dirigirse en el escritorio y crear una carpeta que llamaremos **microfrontend**.
  
     ```bash
     mkdir microfrontend
     ```
     <img src="../images/10/1.png" width="500px">
 
-3. Entrar a la carpeta **microfrontend** desde la terminal
+3. Entrar a la carpeta **microfrontend** desde la terminal.
 
-4. Creamos un **workspace** de angular con el siguiente comando:
+4. Crear un **workspace** de Angular con el siguiente comando:
 
     ```bash
     ng new workspace --create-application=false 
     ```
     <img src="../images/10/2.png" width="500px">
 
-5. Entrar al workspace generado, **cd workspace**
+5. Entrar al workspace generado, **cd workspace**.
 
-6. Generar 3 proyectos dentro del workspace
+6. Generar 3 proyectos dentro del workspace.
 
-    > **IMPORTANTE**: Al generar los 3 proyectos, por cada proyecto me pregunta si quiero activar el **SSR**, en los 3 casos le diremos que no
+    > **IMPORTANTE**: Al generar los 3 proyectos, por cada proyecto pregunta si quiero activar el **SSR**, en los 3 casos le diremos que no.
 
     ```bash
     ng generate application shell --style=css
@@ -74,21 +74,21 @@ En este laboratorio se explora las bases de los microfrontends usando
     ng generate application alumno --style=css
     ```
 
-7. Instalamnos **Native Federation** (seguimos en el workspace desde la terminal)
+7. Instalar **Native Federation** (seguimos en el workspace desde la terminal).
 
     ```bash
     npm i -D @angular-architects/native-federation
     ```
 
 
-8. Configuramos el proyecto **host**
+8. Configurar el proyecto **host**.
 
 ```bash
 ng g @angular-architects/native-federation:init --project shell --port 4200 --type dynamic-host
 ```
 <img src="../images/10/3.png" width="500px">
 
-9. Configuramos los proyectos remotos **inicio** y **alumno**
+9. Configurar los proyectos remotos **inicio** y **alumno**.
 
 ```bash
 ng g @angular-architects/native-federation:init --project inicio --port 4201 --type remote
@@ -100,7 +100,7 @@ ng g @angular-architects/native-federation:init --project alumno --port 4202 --t
 <img src="../images/10/4.png" width="500px">
 
 
-10. Abrir la carpeta microfrontend en **Visual Studio Code**
+10. Abrir la carpeta microfrontend en **Visual Studio Code**.
 
 <img src="../images/10/5.png" width="300px">
 
@@ -146,7 +146,7 @@ export const routes: Routes = [
 ];
 ```
 
-14. Abrir el siguiente archivo **workspace**->**projects**->**shell**->**src**->**app**->**app.component.ts** y añadir en la sección de importaciónes **RouterLink**
+14. Abrir el siguiente archivo **workspace**->**projects**->**shell**->**src**->**app**->**app.component.ts** y añadir en la sección de importaciónes **RouterLink**.
 
 ```typescript
 import { Component } from '@angular/core';
@@ -164,7 +164,7 @@ export class AppComponent {
 }
 ```
 
-15. Añadir boostrap en el siguiente archivo: **workspace**->**projects**->**shell**->**src**->**index.html**
+15. Añadir Boostrap en el siguiente archivo: **workspace**->**projects**->**shell**->**src**->**index.html**.
 
 ```html
 <!doctype html>
@@ -242,7 +242,7 @@ export class AppComponent {
 </div>
 ```
 
-19. Abrir 3 terminales y navegar hasta la carpeta **workspace** en las 3 y en cada una iniciar cada proyecto
+19. Abrir 3 terminales y navegar hasta la carpeta **workspace** en las 3 y en cada una iniciar cada proyecto.
 
 ```bash
 ng serve shell
@@ -254,7 +254,7 @@ ng serve inicio
 ng serve alumno
 ```
 
-## Resultado Esperado
+## Resultado esperado
 
 <img src="../images/10/6.png" width="500px">
 
