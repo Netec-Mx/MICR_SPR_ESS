@@ -2,11 +2,13 @@
 
 En una empresa de ventas solicitan 2 módulos que se van a comunicar entre ellos **Cliente** y **Orden** para llevar el registro de las ordenes y almacenarlas en una base de datos
 
-## Objetivos
+## Objetivos de la práctica:
 - Implementar Feign para comunicar microservicios.
 - Diseñar interface de comunicación Feign.
 - Probar la comunicación de microservicios usando postman o insomnia.
 
+## Duración aproximada:
+- 60 minutos.
 ---
 
 <div style="width: 400px;">
