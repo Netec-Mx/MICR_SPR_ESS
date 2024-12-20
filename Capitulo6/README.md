@@ -1,10 +1,10 @@
 # Práctica 6. Asegurando microservicio con Autenticación JWT
-La empresa netec requiere que se aseguren los endpoints del microservicio cliente, permitiendo sólo el acceso a aquellos usuarios que esten registrados en el Directorio de Usuarios de la empresa. 
+La empresa Netec requiere que se aseguren los endpoints del microservicio cliente, permitiendo sólo el acceso a aquellos usuarios que esten registrados en el Directorio de Usuarios de la empresa. 
 
 ## Objetivos
-- Usar Spring Security en microservicio
-- Implementar autenticación JWT usando a Keycloak
-- Configuración de identity provider (Keycloak)
+- Usar Spring Security en microservicio.
+- Implementar autenticación JWT usando a Keycloak.
+- Configuración de identity provider (Keycloak).
 
 ---
 
@@ -42,9 +42,9 @@ Este laboratorio se separa en las siguientes secciones:
 
 
 ## Configuración Keycloak [Instrucciones](#instrucciones)
-1. Para este laboratorio se necesita que **docker este instalado e iniciado**
+1. Para este laboratorio se necesita que **docker este instalado e iniciado**.
 
-2. Abrir una terminar y ejecutar el siguiente comando:
+2. Abrir una terminal y ejecutar el siguiente comando:
 
 ```bash
 docker run -p 80:8080 --name idp -e KEYCLOAK_PASSWORD=pass -e KEYCLOAK_USER=admin -e PROXY_ADDRESS_FORWARDING=true -d edgardovefe/clase_seguridad:keycloak
@@ -53,14 +53,14 @@ docker run -p 80:8080 --name idp -e KEYCLOAK_PASSWORD=pass -e KEYCLOAK_USER=admi
 > **NOTA**: El comando anterior inicia un contenedor con **Keycloak** y lo expone por el 
 puerto 80. 
 
-> **IMPORTANTE**: El usuario configurado es **admin** y el password es **pass**
+> **IMPORTANTE**: El usuario configurado es **admin** y el password es **pass**.
 
-3. Abrir un nuevo explorador web y escribir la siguiente ruta: http://localhost:80, abrirá la siguiente pantalla.:
+3. Abrir un nuevo explorador web y escribir la siguiente ruta: http://localhost:80, abrirá la siguiente pantalla:
 
 
 <img src="../images/6/1.png" width="500px">
 
-4. Seleccionar **Administration Console**
+4. Seleccionar **Administration Console**.
 
 <img src="../images/6/2.png" width="500px">
 
@@ -71,7 +71,7 @@ puerto 80.
 <img src="../images/6/3.png" width="500px">
 
 
-6. Crear un Realm (Conocido cómo dominio de usuarios)
+6. Crear un Realm (Conocido cómo dominio de usuarios).
 
 <img src="../images/6/4.png" width="500px">
 
@@ -81,7 +81,7 @@ puerto 80.
 <img src="../images/6/5.png" width="500px">
 
 
-8. Crear un cliente 
+8. Crear un cliente. 
 
 <img src="../images/6/6.png" width="500px">
 
@@ -97,11 +97,11 @@ puerto 80.
 
 <img src="../images/6/8.png" width="500px">
 
-11. **(Opcional)** Cambiar la duración del access token a 30 min o menos (si no se cambia la duración cada token sólo podrá usarse una vez) **myclient**->**settings**->**Advanced Settings**
+11. **(Opcional)** Cambiar la duración del access token a 30 min o menos (si no se cambia la duración cada token sólo podrá usarse una vez) **myclient**->**settings**->**Advanced Settings**.
 
 <img src="../images/6/9.png" width="500px">
 
-12. Crear usuario 
+12. Crear usuario. 
 
 <img src="../images/6/10.png" width="500px">
 
@@ -111,18 +111,18 @@ puerto 80.
 
 <img src="../images/6/11.png" width="500px">
 
-14. Agregar credenciales al usuario, añadir **123456**
+14. Agregar credenciales al usuario, añadir **123456**.
 
 <img src="../images/6/12.png" width="500px">
 
-15. Extraemos la información necesaria para Spring boot **Realm Settings**->**Endpoints**->**OpenID Endpoint Configuration**
+15. Extraer la información necesaria para Spring boot **Realm Settings**->**Endpoints**->**OpenID Endpoint Configuration**.
 
 <img src="../images/6/13.png" width="500px">
 
 **Explicación de cada endpoint**
-- **issuer**: endpoint necesario para la conexión de keycloak con spring boot
+- **issuer**: endpoint necesario para la conexión de keycloak con spring boot.
 
-- **jwks_uri**: Contiene las llaves publicas para verificar el JWT, también es necesario para spring boot
+- **jwks_uri**: Contiene las llaves publicas para verificar el JWT, también es necesario para spring boot.
 
 - **token_endpoint**: Es usado para obtener los access tokens de los usuarios, este lo usa el cliente. 
 
@@ -132,16 +132,16 @@ puerto 80.
 
 ## Codificación MicroserviceClient [Instrucciones](#instrucciones)
 
-1. Usar el MicroserviceClient creado en el capítulo3 si no se tiene el microservicio descargarlo de la carpeta **[Capitulo6](../Capitulo6/)**
+1. Usar el MicroserviceClient creado en el capítulo3 si no se tiene el microservicio descargarlo de la carpeta **[Capitulo6].(../Capitulo6/)**
 
 
-2. Abrir **Spring Tool Suite**
+2. Abrir **Spring Tool Suite**.
 
-3. Importar el proyecto **MicroserviceClient**,  **File**-> **Import**->**Maven**->**Existing Maven Projects**
+3. Importar el proyecto **MicroserviceClient**,  **File**-> **Import**->**Maven**->**Existing Maven Projects**.
 
-4. **(Opcional)** Validar que el microservicio funcione
+4. **(Opcional)** Validar que el microservicio funcione.
 
-5. Añadir las siguientes dependencias en el **pom.xml** en la sección de **< dependencies >**
+5. Añadir las siguientes dependencias en el **pom.xml** en la sección de **< dependencies >**.
 - **Spring Security**
 - **OAuth2 Resource Server**
 
@@ -161,7 +161,7 @@ puerto 80.
 </dependency>
 ```
 
-6. Añadimos la siguiente configuración en el archivo **application.properties**
+6. Añadimos la siguiente configuración en el archivo **application.properties**.
 
 > **IMPORTANTE**: Esta configuración se agrega al final de la que ya teniamos, no borre la configuración anterior. 
 
@@ -204,16 +204,16 @@ jwt.auth.converter.principal-attribute=preferred_username
 logging.level.org.springframework.security=DEBUG
 ```
 
-7. Creamos un nuevo paquete en **MicroserviceClient**->**src/main/java**->**Click derecho en com.bancolombia.app**->**New**->**package**
+7. Crear un nuevo paquete en **MicroserviceClient**->**src/main/java**->**Click derecho en com.bancolombia.app**->**New**->**package**
 - Nombre paquete: **security**
 
 <img src="../images/6/14.png" width="500px">
 
 
-8. Añadir el siguiente código en el paquete security, esto permite que cada request a nuestro microservicio debe de llevar un **access token** 
+8. Añadir el siguiente código en el paquete security, esto permite que cada request a nuestro microservicio debe de llevar un **access token**. 
 
 **JwtConverterProperties.java**
-> **NOTA**: Esta clase permite obtener los valores del archivo de propiedades el nombre de nuestro cliente y el atributo principal
+> **NOTA**: Esta clase permite obtener los valores del archivo de propiedades el nombre de nuestro cliente y el atributo principal.
 
 ```java
 package com.bancolombia.app.security;
@@ -247,7 +247,7 @@ public class JwtConverterProperties {
 
 **JwtConverter.java**
 
-> **NOTA**: Esta clase permite que se puedan obtener los claims de nuestro jwt, en este caso sólo se obtienen el user name y los roles (no se usan en el código sólo se usan en los logs)
+> **NOTA**: Esta clase permite que se puedan obtener los claims de nuestro jwt, en este caso sólo se obtienen el user name y los roles (no se usan en el código sólo se usan en los logs).
 
 
 ```java
@@ -360,13 +360,13 @@ public class SecurityConfig {
 }
 ```
 
-9. Guardar todo e iniciar el microservicio **Click derecho en MicroserviceClient**->**Run As**->**Spring Boot App**
+9. Guardar todo e iniciar el microservicio **Click derecho en MicroserviceClient**->**Run As**->**Spring Boot App**.
 
 
 
 ## Resultado Esperado [Instrucciones](#instrucciones)
 
-1. Probar el microservicio sin Bearer token
+1. Probar el microservicio sin Bearer token.
 
 <img src="../images/6/15.png" width="500px">
 
