@@ -2,12 +2,14 @@
 En este laboratorio se explora las bases de los microfrontends usando 
 **native-federation** en Angular 18.
 
-## Objetivos
+## Objetivos de la práctica:
 - Instalar y configurar Native Federation.
 - Crear un micro frontend.
 - Comunicar micro frontend con shell.
 - Interactuar con microfrontends con explorador web.
 
+## Duración aproximada:
+- 60 minutos.
 ---
 
 <div style="width: 400px;">
