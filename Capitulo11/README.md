@@ -2,6 +2,9 @@
 La empresa Netec requiere una implementación en microservicios para controlar el sistema de articulos y el carrito de compras.
 Para netec es importante el buen diseño de las  aplicaciones, porque se piensa agregar más en un futuro. Y también la carga de trabajo es variable.
 
+## Duración aproximada:
+- 240 minutos.
+  
 ---
 
 <div style="width: 400px;">
