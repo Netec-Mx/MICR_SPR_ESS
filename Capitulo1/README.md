@@ -4,7 +4,7 @@
 
 En este laboratorio se implementa una aplicación monolítica de .net core usando Visual Studio 2022.
 
-## Objetivos:
+## Objetivos de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
@@ -12,6 +12,9 @@ Al finalizar la práctica, serás capaz de:
 - Iniciar y probar un sistema monolítico. <br>
 - Analizar los componentes del sistema. <br>
 - Entender MVC.
+
+## Duración aproximada
+- 45 minutos.
 
 ---
 <!--Este fragmento es la barra de 
