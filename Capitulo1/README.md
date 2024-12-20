@@ -47,19 +47,19 @@ Se espera que analices la siguiente estructura de aplicación:
 
 1. Descargar la aplicación que se encuentra en la carpeta **[Capitulo1](../Capitulo1)** con el nombre **MVCMonolitico**.
 
-2. Abre Visual Studio 2022. <br>
+2. Abrir Visual Studio 2022. <br>
 
 ![opcion](../images/1/2.png)
 
-3. Abre la solución. <br>
+3. Abrir la solución. <br>
 
 ![solucion](../images/1/3.png)
 
-4.  Abre la consola de administración de paquetes NuGet **Herramientas** > **Administrador de paquetes NuGet** > **Consola de administrador de paquetes**. <br>
+4.  Abrir la consola de administración de paquetes NuGet **Herramientas** > **Administrador de paquetes NuGet** > **Consola de administrador de paquetes**. <br>
 
 ![alt text](../images/1/4.png)
 
-5. En la terminal, ejecuta el siguiente comando:
+5. En la terminal, ejecutar el siguiente comando:
 
 ```bash
 donet restore
@@ -67,11 +67,11 @@ donet restore
 
 ![restore](../images/1/5.png)
 
-6. Analiza las clases y el código que está en el proyecto.
+6. Analizar las clases y el código que está en el proyecto.
 
 ![alt text](../images/1/6.png)
 
-7. Inicia la aplicación.
+7. Iniciar la aplicación.
 
 ![alt text](../images/1/7.png)
 
@@ -83,6 +83,6 @@ Al iniciar la aplicación, debes de observar algo similar a la pantalla:
 
 ![alt text](../images/1/8.png)
 
-> Inserta datos en la aplicación y observa el funcionamiento. 
+> Insertar datos en la aplicación y observar el funcionamiento. 
 
 > Toma nota de la arquitectura usada, ya que en los microservicios la organización de código es similar. 
