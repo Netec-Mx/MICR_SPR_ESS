@@ -2,11 +2,14 @@
 En este laboratorio exploraremos el uso de CI/CD para la creación automatica de imagenes
 y el despliegue de 4 microservicios en Kubernetes usando un archivo **yaml**.
 
-## Objetivos
+## Objetivos de la práctica:
 - Uso de **Git hub Actions** para generar imágenes de docker.
 - Configuración de Kubernetes.
 - Despliegue de aplicación en Kubernetes.
 
+## Duración aproximada:
+- 60 minutos.
+  
 ---
 
 <div style="width: 400px;">
