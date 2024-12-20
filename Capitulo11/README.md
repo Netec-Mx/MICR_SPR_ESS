@@ -1,5 +1,5 @@
-# Práctica 11. Proyecto Final 
-La empresa netec requiere una implementación en microservicios para controlar el sistema de articulos y el carrito de compras.
+# Práctica 11. Proyecto final 
+La empresa Netec requiere una implementación en microservicios para controlar el sistema de articulos y el carrito de compras.
 Para netec es importante el buen diseño de las  aplicaciones, porque se piensa agregar más en un futuro. Y también la carga de trabajo es variable.
 
 ---
@@ -25,10 +25,10 @@ Para netec es importante el buen diseño de las  aplicaciones, porque se piensa 
 ---
 
 
-## Características de microservicio articulo
+## Características de microservicio articulo.
 El microservicio articulos debe permitir:
 
-- El CRUD de la entidad
+- El CRUD de la entidad.
 - La entidad articulo debería tener los siguientes atributos:
     - **id:long**
     - **name:String**
@@ -36,25 +36,25 @@ El microservicio articulos debe permitir:
     - **price:double**
 
 
-## Características del microservicio Carrito
+## Características del microservicio Carrito.
 
-Por cuestiones de seguridad debe protegerse este microservicio usando **Openid Connect**
+Por cuestiones de seguridad debe protegerse este microservicio usando **Openid Connect**.
 
 - La entidad Carrito debe de tener los siguientes elementos:
     - **articulos:List**
-- No es necesario guardarlo en una base de datos el Carrito de compras
+- No es necesario guardarlo en una base de datos el Carrito de compras.
 - El microservicio debe conectarse al microservicio articulo cuando inserte un articulo. 
 - Debe tener una función que retorne la suma total del costo de los productos. 
 
-## Características de implementación
+## Características de implementación.
 
-- La configuración de los microservicios debe estar externalizada usando **Spring Cloud Config**
+- La configuración de los microservicios debe estar externalizada usando **Spring Cloud Config**.
 
 - Usar el servicio de descubrimiento eureka, para el registro de los microservicios. 
 
-- Debes de generar las imágenes de tus microservicios usando **Github Actions**
+- Generar las imágenes de los microservicios usando **Github Actions**.
 
-- Guardar todos tus entregables en una carpeta **entregables** dentro de tu repositorio. 
+- Guardar todos los entregables en una carpeta **entregables** dentro del repositorio. 
 
 ## Diagrama Propuesto
 
@@ -62,25 +62,25 @@ Por cuestiones de seguridad debe protegerse este microservicio usando **Openid C
 
 ## Entregable
 
-- Se debe enviar un correo a **edgardo.velasco@netec.com** con el url de tu repositorio.
-> **IMPORTANTE**: **para la revisión tu repositorio este debe estar público, si no esta publico no se califica proyecto**
+- Se debe enviar un correo a **edgardo.velasco@netec.com** con el URL del repositorio.
+> **IMPORTANTE**: **para la revisión, el repositorio debe estar público, de no ser así, no se calificara el proyecto.**
 
-- Dentro de tu repositorio debes de crear una carpeta llamada **entregables** con 4 carpetas 1 llamada **producto**, otra llamada **carrito**,  otra llamada **config** y la última **eureka**
+- Dentro del repositorio debes de crear una carpeta llamada **entregables** con 4 carpetas, las cuales deberán llamarse: **producto**, **carrito**, **config** y **eureka**.
 
-    - En la carpeta **producto** añadir las siguientes capturas:
-        - 4 capturas de pantalla 1 por cada método del **CRUD** 
+    - Añadir en la carpeta **producto** las siguientes capturas:
+        - 4 capturas de pantalla 1 por cada método del **CRUD**. 
     
-    - En la carpeta **carrito** añadir las siguientes capturas:
-        - 1 captura de la función **ver todos los productos**
-        - 1 captura de la función **insertar producto**
-        - 1 captura de la función **total productos**
+    - Añadir en la carpeta **carrito** las siguientes capturas:
+        - 1 captura de la función **ver todos los productos**.
+        - 1 captura de la función **insertar producto**.
+        - 1 captura de la función **total productos**.
     
-    - En la carpeta **config** añadir las siguientes capturas:
-        - 1 captura obteniendo la configuración de **micro-product**
-        - 1 captura obteniendo la configuración de **micro-shoppingcart**
+    - Añadir en la carpeta **config** las siguientes capturas:
+        - 1 captura obteniendo la configuración de **micro-product**.
+        - 1 captura obteniendo la configuración de **micro-shoppingcart**.
     
-    - En la carpeta **eureka** añadir las siguientes capturas:
-        - 1 captura del **dashboard eureka** donde se muestren ambos microservicios registrados
+    - Añadir en la carpeta **eureka** las siguientes capturas:
+        - 1 captura del **dashboard eureka** donde se muestren ambos microservicios registrados.
 
 
 > **IMPORTANTE**: Si falta alguna de las capturas o proyectos afecta en tu calificación final. 
