@@ -1,13 +1,16 @@
 # Práctica 7. CI/CD Github Actions
 
-En este laboratorio exploraremos la integración continúa usando Github Actions y el almacenamiento de nuestra imagen Docker en Docker hub
+En este laboratorio exploraremos la integración continúa usando Github Actions y el almacenamiento de nuestra imagen Docker en Docker Hub.
 
-## Objetivos
+## Objetivos de la práctica:
 - Almacenar el código de un microservicio en un repositorio remoto. 
 - Explorar las funcionalidades de **Github Actions**.
 - Crear un pipeline en **Github Actions**.
 - Construir una imagen de docker en **Github Actions**.
 
+## Duración aproximada:
+- 60 minutos.
+  
 ---
 
 <div style="width: 400px;">
