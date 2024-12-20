@@ -51,15 +51,15 @@ Esta práctica se separa en las siguientes secciones:
 
 ## Tarea 1. Configuración MySQL: [Instrucciones](#instrucciones)
 
-1. Abre **MySQL 8 Command Line  Client**.
+1. Abrir **MySQL 8 Command Line  Client**.
 
-> **NOTA:** Es posible que te solicite un password, este se encuentra en un archivo en el escritorio de la máquina virtual (o si estás utilizando tu equipo de cómputo, escribe el password configurado)
+> **NOTA:** Es posible que te solicite un password, este se encuentra en un archivo en el escritorio de la máquina virtual (o si estás utilizando tu equipo de cómputo, escribe el password configurado).
 
 <img src="../images/3/1.png" width="500px">
 
 
 
-2. Usando la terminal de mysql ejecutar el siguiente comando:
+2. Usando la terminal de mysql, ejecutar el siguiente comando:
 
 ```sql
 create database micro1;
@@ -71,7 +71,7 @@ create database micro1;
 - **Server**: localhost
 - **Port**: 3306 
 
-> **Nota**: el puerto y el server pueden cambiar si el servidor de base de datos esta remoto
+> **Nota**: el puerto y el server pueden cambiar si el servidor de base de datos esta remoto.
 
 
 ## Codificación Microservicio [Instrucciones](#instrucciones)
@@ -98,9 +98,9 @@ create database micro1;
 - **Spring Data JPA**
 - **MySQL Driver**
 
-5. Esperamos a que el proyecto termine de crearse. 
+5. Esperar a que el proyecto termine de crearse. 
 
-6. Creamos los paquetes donde pondremos el código **src/main/java**->**com.bancolombia.app CLICK DERECHO**-> **new**-> **package** **x4**
+6. Crear los paquetes donde pondremos el código **src/main/java**->**com.bancolombia.app CLICK DERECHO**-> **new**-> **package** **x4**
 
 - **entities**
 - **dao**
@@ -109,7 +109,7 @@ create database micro1;
 
 <img src="../images/3/4.png" width="500px">
 
-7. En el paquete **entities** añadimos el siguiente código
+7. En el paquete **entities** añadir el siguiente código
 
 **Client.java** (*java class*)
 
@@ -162,7 +162,7 @@ public class Client {
 
 }
 ```
-8. En el paquete **dao** añadimos el siguiente código:
+8. En el paquete **dao** añadir el siguiente código:
 
 **IClientDAO** (*java interface*)
 
@@ -178,7 +178,7 @@ public interface IClientDAO extends CrudRepository<Client, Long> {
 }
 ```
 
-9. En el paquete **services** añadimos el siguiente código:
+9. En el paquete **services** añadir el siguiente código:
 
 **IService.java** (*java interface*)
 
